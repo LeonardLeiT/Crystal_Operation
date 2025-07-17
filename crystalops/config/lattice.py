@@ -39,7 +39,6 @@ def setting_type(Lattice, index, value=None):
     
     return Lattice
         
-# 立方
 def SC():  # Simple Cubic
     return Lattice('SC', [[0, 0, 0]], np.eye(3))
 
@@ -49,14 +48,12 @@ def BCC():  # Body-Centered Cubic
 def FCC():  # Face-Centered Cubic
     return Lattice('FCC', [[0, 0, 0], [0.5, 0.5, 0], [0.5, 0, 0.5], [0, 0.5, 0.5]], np.eye(3))
 
-# 六方 / 三方
 def HCP(c_a_ratio=np.sqrt(8/3)):  # Hexagonal Close-Packed
     axis = [[1, 0, 0], 
             [-0.5, np.sqrt(3)/2, 0], 
             [0, 0, c_a_ratio]]
     return Lattice('HCP', [[0, 0, 0], [2/3, 1/3, 0.5]], axis)
 
-# 四方
 def ST(z = 1.5):  # Simple Tetragonal
     axis = [[1, 0, 0], [0, 1, 0], [0, 0, z]]
     return Lattice('ST', [[0, 0, 0]], axis)
@@ -65,7 +62,7 @@ def BCT(z = 1.5):  # Body-Centered Tetragonal
     axis = [[1, 0, 0], [0, 1, 0], [0, 0, z]]
     return Lattice('BCT', [[0, 0, 0], [0.5, 0.5, 0.5]], axis)
 
-# 正交
+
 def SO(x = 1, y = 2, z = 3):  # Simple Orthorhombic
     axis = [[x, 0, 0], [0, y, 0], [0, 0, z]]
     return Lattice('SO', [[0, 0, 0]], axis)
@@ -82,7 +79,7 @@ def BCO(ratio_yx = 2, ratio_zx = 3):  # Body-Centered Orthorhombic
     axis = [[1, 0, 0], [0, ratio_yx, 0], [0, 0, ratio_zx]]
     return Lattice('ICO', [[0, 0, 0], [0.5, 0.5, 0.5]], axis)
 
-# 单斜
+
 def SM(x = 1, y = 2, z = 3, alpha_deg=100):  # Simple Monoclinic
     alpha = np.radians(alpha_deg)
     axis = [[x, 0, 0], [0, y, 0], [np.cos(alpha) * z, 0, np.sin(alpha) * z]]
@@ -93,7 +90,7 @@ def BCM(x = 1, y = 2, z = 3, alpha_deg=100):  # Base-Centered Monoclinic
     axis = [[x, 0, 0], [0, y, 0], [np.cos(alpha) * z, 0, np.sin(alpha) * z]]
     return Lattice('BCM', [[0, 0, 0], [0.5, 0.5, 0]], axis)
 
-# 三斜
+
 def TRI(length = [1, 2, 3], angle = [80, 85, 75]):  # Triclinic
     alpha = np.radians(angle[0])
     beta = np.radians(angle[1])
@@ -109,7 +106,7 @@ def TRI(length = [1, 2, 3], angle = [80, 85, 75]):  # Triclinic
     az = [cz_x, cz_y, cz_z]
     return Lattice('TRI', [[0, 0, 0]], [ax, ay, az])
 
-# 菱方
+
 def RHL(alpha_deg=75):  # Rhombohedral (Trigonal)
     alpha = np.radians(alpha_deg)
     a1 = [1, 0, 0]
@@ -121,7 +118,7 @@ def RHL(alpha_deg=75):  # Rhombohedral (Trigonal)
     ]
     return Lattice('RHL', [[0, 0, 0]], [a1, a2, a3])
 
-# 定义晶体结构复制
+
 def Duplicate(lattice, nx=1, ny=1, nz=1):
     """
     Replicate a unit cell in the x, y, z directions.

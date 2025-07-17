@@ -5,8 +5,9 @@ from pathlib import Path
 # 添加父目录到 sys.path，以便能够导入 crystal_config 包
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from crystal_operation.crystal_config import generate_lattice_cell_shape, get_element
-from crystal_operation.crystal_config.lattice import *
+from crystalops.users.lattice_shape import generate_lattice_cell_shape
+from crystalops.config.element import get_element
+from crystalops.config.lattice import *
 
 # FCC_DSC =  generate_lattice_face_shape(    
 #     base_lattice=FCC(), 
