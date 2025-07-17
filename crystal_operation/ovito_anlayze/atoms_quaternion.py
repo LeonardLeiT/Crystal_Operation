@@ -3,7 +3,6 @@ from ovito.modifiers import PolyhedralTemplateMatchingModifier
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 import pandas as pd
-
 # Extracts quaternion orientations from an OVITO-compatible dump file
 def dump_ovito_quaternion(dump_name = "min-1200.data"):
     pipeline = import_file(dump_name)

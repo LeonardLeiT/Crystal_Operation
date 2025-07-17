@@ -1,5 +1,3 @@
-__all__ = ['get_element']
-
 class Element:
     """单个化学元素类"""
     

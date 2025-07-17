@@ -18,7 +18,3 @@ vertices, face = compute_voronoi_face_centers(
 
 print(face)
 plot_voronoi_polyhedron(vertices, face, save_path='HCP')
-
-
-
-

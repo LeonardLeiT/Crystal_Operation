@@ -1,5 +1,3 @@
-__all__ = ['select_sphere_region']
-
 import numpy as np
 from .lattice import Lattice, Duplicate
 

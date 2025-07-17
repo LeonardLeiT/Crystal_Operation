@@ -1,5 +1,3 @@
-__all__ = ['read_dump_lammps']
-
 import numpy as np
 import pandas as pd
 from ..crystal_config.lattice import Lattice

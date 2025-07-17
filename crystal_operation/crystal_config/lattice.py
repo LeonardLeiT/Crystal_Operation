@@ -1,5 +1,3 @@
-__all__ = ['Lattice', 'SC', 'BCC', 'FCC', 'HCP', 'ST', 'BCT', 'SO', 'BCO', 'FCO', 'ABO', 'SM', 'BCM', 'TRI', 'RHL', 'Duplicate', 'setting_type', 'Lattice_plot']
-
 import numpy as np
 
 ##### 基础函数 ######
@@ -153,7 +151,6 @@ def Duplicate(lattice, nx=1, ny=1, nz=1):
 
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 class Lattice_plot:
     def __init__(self, outfile='lattice', type_fig='svg'):

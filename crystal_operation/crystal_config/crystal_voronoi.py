@@ -1,5 +1,3 @@
-__all__ = ['compute_voronoi_face_centers', 'plot_voronoi_polyhedron']
-
 import numpy as np
 from scipy.spatial import Voronoi
 

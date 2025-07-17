@@ -1,5 +1,3 @@
-__all__ = ['generate_lattice_kelvin_shape', 'generate_lattice_face_shape', 'generate_lattice_cell_shape']
-
 import numpy as np
 import random
 from .lattice import *
