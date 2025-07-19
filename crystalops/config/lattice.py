@@ -62,7 +62,6 @@ def BCT(z = 1.5):  # Body-Centered Tetragonal
     axis = [[1, 0, 0], [0, 1, 0], [0, 0, z]]
     return Lattice('BCT', [[0, 0, 0], [0.5, 0.5, 0.5]], axis)
 
-
 def SO(x = 1, y = 2, z = 3):  # Simple Orthorhombic
     axis = [[x, 0, 0], [0, y, 0], [0, 0, z]]
     return Lattice('SO', [[0, 0, 0]], axis)
@@ -79,7 +78,6 @@ def BCO(ratio_yx = 2, ratio_zx = 3):  # Body-Centered Orthorhombic
     axis = [[1, 0, 0], [0, ratio_yx, 0], [0, 0, ratio_zx]]
     return Lattice('ICO', [[0, 0, 0], [0.5, 0.5, 0.5]], axis)
 
-
 def SM(x = 1, y = 2, z = 3, alpha_deg=100):  # Simple Monoclinic
     alpha = np.radians(alpha_deg)
     axis = [[x, 0, 0], [0, y, 0], [np.cos(alpha) * z, 0, np.sin(alpha) * z]]
@@ -91,7 +89,7 @@ def BCM(x = 1, y = 2, z = 3, alpha_deg=100):  # Base-Centered Monoclinic
     return Lattice('BCM', [[0, 0, 0], [0.5, 0.5, 0]], axis)
 
 
-def TRI(length = [1, 2, 3], angle = [80, 85, 75]):  # Triclinic
+def TRI(length = [1, 1.1, 1.2], angle = [80, 85, 75]):  # Triclinic
     alpha = np.radians(angle[0])
     beta = np.radians(angle[1])
     gamma = np.radians(angle[2])
@@ -106,7 +104,6 @@ def TRI(length = [1, 2, 3], angle = [80, 85, 75]):  # Triclinic
     az = [cz_x, cz_y, cz_z]
     return Lattice('TRI', [[0, 0, 0]], [ax, ay, az])
 
-
 def RHL(alpha_deg=75):  # Rhombohedral (Trigonal)
     alpha = np.radians(alpha_deg)
     a1 = [1, 0, 0]
@@ -117,7 +114,6 @@ def RHL(alpha_deg=75):  # Rhombohedral (Trigonal)
         np.sqrt(1 - 2 * np.cos(alpha)**2 + np.cos(alpha)**3)/(np.sin(alpha))
     ]
     return Lattice('RHL', [[0, 0, 0]], [a1, a2, a3])
-
 
 def Duplicate(lattice, nx=1, ny=1, nz=1):
     """

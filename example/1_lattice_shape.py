@@ -6,7 +6,7 @@ from crystalops.config.crystal_write import write_lammps_data_lattice
 
 print(get_element('Cu'))
 
-choose_type = 'anti_FCC'
+choose_type = 'anti_NAB'
 FCC_DSC =  generate_lattice_kelvin_shape(    
     base_lattice=FCC(), 
     shape_lattice=BCC(), 

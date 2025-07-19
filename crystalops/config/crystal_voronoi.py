@@ -79,7 +79,6 @@ def plot_voronoi_polyhedron(vertices, faces, color='skyblue', edge_color='k', al
         ax.scatter(vertices[:, 0], vertices[:, 1], vertices[:, 2],
                    c='red', s=100, edgecolors='black', linewidths=0.5, depthshade=True)
 
-    # 设置等比例坐标轴
     vertices_all = np.vstack([vertices, [[0, 0, 0]]])
     max_range = (vertices_all.max(axis=0) - vertices_all.min(axis=0)).max() / 2.0
     mid = vertices_all.mean(axis=0)
