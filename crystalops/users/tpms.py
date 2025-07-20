@@ -1,13 +1,199 @@
+import math
 import numpy as np
+import matplotlib.pyplot as plt
+from skimage import measure
+from ..config.base_operation import *
+from mpl_toolkits.mplot3d.art3d import Line3DCollection
 
-##### Schwarz-D 晶体 ######相关函数
+class TPMS_plot:
+    """
+    TPMS_plot: A utility class for visualizing Triply Periodic Minimal Surfaces (TPMS)
+    such as the D-Schwarz and P-Schwarz surfaces using the marching cubes algorithm.
+
+    Features:
+    - Generates volumetric grids and computes isosurfaces.
+    - Supports multiple variants of D-Schwarz (Standard, DSC1, DSC2).
+    - Adds cubic unit cell boundaries with specified solid/dashed edges.
+    - Saves figures in vector format (SVG) with transparent background.
+
+    Example:
+        tpms = TPMS_plot(npoints=50, size=1)
+        tpms.plot_DSchwarz(outfile='schwarz', eq='DSC1')
+    """
+    def __init__(self, npoints: int = 50, size: float = 1.0):
+        """
+        Initialize the TPMS_plot object with a grid and coordinate mesh.
+        
+        Args:
+            npoints: Number of grid points along each axis.
+            size: Scaling factor of the unit cell (in multiples of π).
+        """
+        self.npoints = npoints
+        self.size = size
+        x = np.linspace(0, size * np.pi, npoints)
+        y = np.linspace(0, size * np.pi, npoints)
+        z = np.linspace(0, size * np.pi, npoints)
+        self.X, self.Y, self.Z = np.meshgrid(x, y, z)
+        self.dx, self.dy, self.dz = x[1] - x[0], y[1] - y[0], z[1] - z[0]
+        
+    def save_fig(self, fig: plt.Figure, outfile: str, name: str):
+        """Save the figure to disk in SVG format with transparent background."""
+        fig.savefig(
+            f"{outfile}_{name}.svg",
+            format='svg',
+            bbox_inches='tight',
+            transparent=True,
+            pad_inches=0
+        )
+        
+    def _init_ax(self):
+        """Initialize a 3D matplotlib axis with appropriate settings."""
+        fig = plt.figure(figsize=(6, 6))
+        ax = fig.add_subplot(111, projection='3d')
+        ax.set_axis_off()
+        ax.set_box_aspect([1, 1, 1])
+        ax.view_init(elev=35, azim=35)
+        return fig, ax
+    
+    def _draw_unit_cell(self, ax):
+        """Draws the cubic unit cell with solid and dashed edges."""
+        basis_vectors = np.eye(3) * np.pi * self.size
+        corners = np.array([
+            i*basis_vectors[0] + j*basis_vectors[1] + k*basis_vectors[2]
+            for i in [0, 1] for j in [0, 1] for k in [0, 1]
+        ])
+        edges = [
+            (0,1), (0,2), (0,4), (1,3), (1,5), (2,3),
+            (2,6), (3,7), (4,5), (4,6), (5,7), (6,7)
+        ]
+        dashed_edges = {(0,1), (0,2), (0,4)}
+
+        solid_lines, dashed_lines = [], []
+        for start, end in edges:
+            line = [corners[start], corners[end]]
+            if (start, end) in dashed_edges or (end, start) in dashed_edges:
+                dashed_lines.append(line)
+            else:
+                solid_lines.append(line)
+
+        ax.add_collection3d(Line3DCollection(
+            solid_lines, colors='black', linewidths=1.5, linestyles='solid'))
+        ax.add_collection3d(Line3DCollection(
+            dashed_lines, colors='black', linewidths=1.5, linestyles='solid'))
+    
+    def plot_DSchwarz(self, outfile: str, eq: str = 'DSC1'):
+        """
+        Plot a D-Schwarz surface and save/show the figure.
+        
+        Args:
+            outfile: Output file prefix.
+            eq: Equation variant to use: 'Standard', 'DSC1', or 'DSC2'.
+        """
+        fig, ax = self._init_ax()
+        def DSC(x, y, z, eq):
+            if eq == 'Standard':
+                return np.cos(x) * np.cos(y) * np.cos(z) - \
+                        np.sin(x) * np.sin(y) * np.sin(z)
+            elif eq == 'DSC1':
+                return np.sin(x) * np.sin(y) * np.sin(z) + \
+                   np.sin(x) * np.cos(y) * np.cos(z) + \
+                   np.cos(x) * np.sin(y) * np.cos(z) + \
+                   np.cos(x) * np.cos(y) * np.sin(z)
+            elif eq == 'DSC2':
+                return np.sin(x + np.pi/2) * np.sin(y + np.pi/2) * np.sin(z + np.pi/2) + \
+                   np.sin(x + np.pi/2) * np.cos(y + np.pi/2) * np.cos(z + np.pi/2) + \
+                   np.cos(x + np.pi/2) * np.sin(y + np.pi/2) * np.cos(z + np.pi/2) + \
+                   np.cos(x + np.pi/2) * np.cos(y + np.pi/2) * np.sin(z + np.pi/2)
+            else:
+                raise ValueError("Invalid equation type. Supported types are 'Standard' 'DSC1' and 'DSC2'")
+            
+        F = DSC(self.X, self.Y, self.Z, eq)
+        verts, faces, *_ = measure.marching_cubes(F, level=0, spacing=(self.dx, self.dy, self.dz))
+        ax.plot_trisurf(
+            verts[:,0], verts[:,1], verts[:,2], triangles=faces,
+            cmap='Spectral', lw=0.1
+        )
+
+        self._draw_unit_cell(ax)
+        self.save_fig(fig, outfile, f"DSchwarz_{eq}")
+        plt.show()
+        
+    def plot_PSchwarz(self, outfile):
+        """
+        Plot a P-Schwarz surface and save/show the figure.
+        
+        Args:
+            outfile: Output file prefix.
+        """
+        fig, ax = self._init_ax()
+        F = np.cos(self.X) + np.cos(self.Y) + np.cos(self.Z)
+        verts, faces, _, _ = measure.marching_cubes(F, level=0, spacing=(self.dx, self.dy, self.dz))
+        
+        ax.plot_trisurf(
+            verts[:, 0], verts[:, 1], verts[:, 2], triangles=faces,
+            cmap='Spectral', lw=0.1,
+        )
+        
+        self._draw_unit_cell(ax)
+        self.save_fig(fig, outfile, "PSchwarz")
+        plt.show()
+        
+    def plot_Gyroid(self, outfile: str):
+        """
+        Plot a Schoen's Gyroid Surface and save/show the figure.
+        
+        Args:
+            outfile: Output file prefix.
+        """
+        fig, ax = self._init_ax()
+        def gyroid(x, y, z):
+            return np.sin(x)*np.cos(y) + \
+               np.sin(z)*np.cos(x) + \
+               np.sin(y)*np.cos(z)
+
+        F = gyroid(self.X, self.Y, self.Z)
+        verts, faces, *_ = measure.marching_cubes(F, level=0, spacing=(self.dx, self.dy, self.dz))
+        ax.plot_trisurf(
+            verts[:,0], verts[:,1], verts[:,2], triangles=faces,
+            cmap='Spectral', lw=0.1
+        )
+
+        self._draw_unit_cell(ax)
+        self.save_fig(fig, outfile, f"Gyroid")
+        plt.show()
+        
+    def plot_IWP(self, outfile: str):
+        """
+        Plot a Schoen's I-WP Surface and save/show the figure.
+        
+        Args:
+            outfile: Output file prefix.
+        """
+        fig, ax = self._init_ax()
+        def IWP(x, y, z):
+            return 2*(np.cos(x) * np.cos(y) + \
+                np.cos(y) * np.cos(z) + \
+                np.cos(z) * np.cos(x)) - \
+              (np.cos(2 * x) + np.cos(2 * y) + np.cos(2 * z))
+
+        F = IWP(self.X, self.Y, self.Z)
+        verts, faces, *_ = measure.marching_cubes(F, level=0, spacing=(self.dx, self.dy, self.dz))
+        ax.plot_trisurf(
+            verts[:,0], verts[:,1], verts[:,2], triangles=faces,
+            cmap='Spectral', lw=0.1
+        )
+
+        self._draw_unit_cell(ax)
+        self.save_fig(fig, outfile, f"IWP")
+        plt.show()
+
+# Dschwarz Crystal
 def DSchwarz(Alloy, Range, Center = [1/2, 1/2, 1/2], Index = 1, eq = 2, angle = 0):
     Other = []
     X, Y, Z = Range[0], Range[1], Range[2]
     Structure = np.copy(Alloy).tolist()
     biasX, biasY, biasZ =  Center[0] - 1/2, Center[1] - 1/2, Center[2] - 1/2
     Center = [Center[0] * Range[0], Center[1] * Range[1], Center[2] * Range[2]]
-    # 生成旋转矩阵
     rotation_mat = rotation_matrix(0, 0, angle)
     for s in Structure:
         sc =  rotation_mat @ np.array(s)
@@ -34,8 +220,8 @@ def DSchwarz(Alloy, Range, Center = [1/2, 1/2, 1/2], Index = 1, eq = 2, angle = 
                 Other.append(s)
     return Other
 
-##### Schwarz-G 晶体 ######相关函数
-def GSchwarz(Alloy, Range, Center = [1/2, 1/2, 1/2], Index = 1):
+# Gyroid Crystal
+def Gyroid(Alloy, Range, Center = [1/2, 1/2, 1/2], Index = 1):
     Other = []
     X, Y, Z = Range[0], Range[1], Range[2]
     Structure = np.copy(Alloy).tolist()
@@ -57,7 +243,7 @@ def GSchwarz(Alloy, Range, Center = [1/2, 1/2, 1/2], Index = 1):
                 Other.append(s)
     return Other
 
-##### Schwarz-p 晶体 ######相关函数
+# P-Schwarz Crystal
 def PSchwarz(Alloy, Range, Center = [1/2, 1/2, 1/2], Index = 1):
     Other = []
     X, Y, Z = Range[0], Range[1], Range[2]
@@ -78,7 +264,7 @@ def PSchwarz(Alloy, Range, Center = [1/2, 1/2, 1/2], Index = 1):
                 Other.append(s)
     return Other
 
-##### Schwarz-IWP 晶体 ######相关函数
+# IWP Crystal
 def IWPSchwarz(Alloy, Range, Center = [1/2, 1/2, 1/2], Index = 1):
     Other = []
     X, Y, Z = Range[0], Range[1], Range[2]
@@ -222,7 +408,6 @@ def Math_Schwarz_T1(Alloy, Range, Center = [0, 0, 0], Index = 1, angle = 0):
         B2 = (Vector[0] * (a - Top[0]) + Vector[1] * (b - Top[1]) + Vector[2] * (c - Top[2])) > lamb
         if (B1 and B2):
             Other.append(s)
-    Other = Box_Slice(Other, Range, Sign=1)
     return DSchwarz(Other, Range, Index=3, eq=2, Center=Center)
 
 def Math_Schwarz_T2(Alloy, Range, Center = [0, 0, 0], angle = 0):
@@ -246,7 +431,6 @@ def Math_Schwarz_T2(Alloy, Range, Center = [0, 0, 0], angle = 0):
         B2 = (Vector[0] * (a - Top[0]) + Vector[1] * (b - Top[1]) + Vector[2] * (c - Top[2])) > lamb
         if (B1 and B2):
             Other.append(s)
-    Other = Box_Slice(Other, Range, Sign = 1)
     return DSchwarz(Other, Range, Index=3, eq=2, Center=Center, angle = 180)
 
 def Math_Schwarz_T3(Alloy, Range, Center = [0, 0, 0], angle = 0):
@@ -270,7 +454,6 @@ def Math_Schwarz_T3(Alloy, Range, Center = [0, 0, 0], angle = 0):
         B2 = (Vector[0] * (a - Top[0]) + Vector[1] * (b - Top[1]) + Vector[2] * (c - Top[2])) < delt
         if (B1 and B2):
             Other.append(s)
-    Other = Box_Slice(Other, Range, Sign = 1)
     return DSchwarz(Other, Range, Index=1, eq=2, Center=Center, angle = -90)
 
 def Math_Schwarz_T4(Alloy, Range, Center = [0, 0, 0], angle = 0):
@@ -294,14 +477,11 @@ def Math_Schwarz_T4(Alloy, Range, Center = [0, 0, 0], angle = 0):
         B2 = (Vector[0] * (a - Top[0]) + Vector[1] * (b - Top[1]) + Vector[2] * (c - Top[2])) > lamb
         if (B1 and B2):
             Other.append(s)
-    Other = Box_Slice(Other, Range, Sign = 1)
     return DSchwarz(Other, Range, Index=1, eq=2, Center=Center, angle = 90)
 
 def Math_D_SCI(Range=None, a=3.61, M = 63.546, SeedModel=0):
     if Range is None:
-        value = random.random()  # 生成0到1之间的随机浮点数
-        print("Range Not Input, Random value is:", value)
-        Range = [value, value, value]  
+        Range = [10, 10, 10]  
     Schwarz = {}
     Fcc = FCC()
     center = [1 / 2, 1 / 2, 1 / 2]
@@ -354,9 +534,7 @@ def Math_D_SCI(Range=None, a=3.61, M = 63.546, SeedModel=0):
 
 def Math_D_SCI_NT(Range=None, a=3.61, M = 63.546, pitch=None, head=None, roll=None, SeedModel=0):
     if Range is None:
-        value = random.random()  # 生成0到1之间的随机浮点数
-        print("Range Not Input, Random value is:", value)
-        Range = [value, value, value]  
+        Range = [10, 10, 10]  
     Fcc = FCC()
     center = [1 / 2, 1 / 2, 1 / 2]
     DSC = {}

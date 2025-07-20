@@ -1,7 +1,6 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
-##### 基础函数 ######
-# 定义晶体结构
 class Lattice:
     def __init__(self, name, point, axis, size=None, point_types=None, point_properties=None):
         self.name = name
@@ -88,7 +87,6 @@ def BCM(x = 1, y = 2, z = 3, alpha_deg=100):  # Base-Centered Monoclinic
     axis = [[x, 0, 0], [0, y, 0], [np.cos(alpha) * z, 0, np.sin(alpha) * z]]
     return Lattice('BCM', [[0, 0, 0], [0.5, 0.5, 0]], axis)
 
-
 def TRI(length = [1, 1.1, 1.2], angle = [80, 85, 75]):  # Triclinic
     alpha = np.radians(angle[0])
     beta = np.radians(angle[1])
@@ -141,9 +139,6 @@ def Duplicate(lattice, nx=1, ny=1, nz=1):
     new_size = lattice.size * np.array([nx, ny, nz])
 
     return Lattice(lattice.name, all_points, lattice.axis, new_size)
-
-import numpy as np
-import matplotlib.pyplot as plt
 
 class Lattice_plot:
     def __init__(self, outfile='lattice', type_fig='svg'):
