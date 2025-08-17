@@ -2,7 +2,6 @@ import os
 import sys
 from pathlib import Path
 
-# 添加父目录到 sys.path，以便能够导入 crystal_config 包
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 from crystalops.users.lattice_shape import generate_lattice_cell_shape

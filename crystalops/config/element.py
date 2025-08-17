@@ -1,5 +1,4 @@
 class Element:
-    """单个化学元素类"""
     
     def __init__(self, symbol, name, atomic_number, atomic_mass, group, period, block):
         self.symbol = symbol

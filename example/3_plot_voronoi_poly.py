@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-from crystalops.config.crystal_voronoi import compute_voronoi_face_centers, plot_voronoi_polyhedron
+from crystalops.config.voronoi import compute_voronoi_face_centers, plot_voronoi_polyhedron
 from crystalops.config.lattice import *
 
 

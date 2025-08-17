@@ -50,7 +50,7 @@ def Cfg_lattice(lattice, lattice_constant=1, Name='structure', element='Cu'):
     Cfg(lattice.point, lattice.axis, lattice.size, lattice_constant, Name, element)
     
 ##### lammps_data ######
-def write_lammps_data(points, axis, Size, point_types, lattice_constant=1, Name='structure', element=['Cu']):
+def write_lammps_data(real_points, axis, Size, point_types, lattice_constant=1, Name='structure', element=['Cu']):
     """
     Write a CFG file from atomic positions and lattice vectors.
 
@@ -67,12 +67,12 @@ def write_lammps_data(points, axis, Size, point_types, lattice_constant=1, Name=
         print(element)
         print(unique_type)
         raise ValueError("The num element not match atoms type")
-    Natoms = len(points)
+    Natoms = len(real_points)
     if len(point_types) != Natoms:
         raise ValueError("The num atoms not match atoms type")      
     
     # Scale lattice vectors
-    real_points = np.array(points) @ np.array(axis) * lattice_constant
+    real_points = np.array(real_points) * lattice_constant
     axis_scaled = np.array(axis) * np.array(Size) * lattice_constant
     
     xlo, xhi = 0.0, axis_scaled[0][0]
@@ -104,7 +104,7 @@ def write_lammps_data(points, axis, Size, point_types, lattice_constant=1, Name=
             
 def write_lammps_data_lattice(lattice, lattice_constant=1, Name='structure', element=['Cu']):
     write_lammps_data(
-        points = lattice.point,
+        real_points = lattice.point @ lattice.axis,
         axis = lattice.axis,
         Size = lattice.size,
         point_types = lattice.point_types,
