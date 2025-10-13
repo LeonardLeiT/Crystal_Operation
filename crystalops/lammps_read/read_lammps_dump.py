@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from ..crystal_config.lattice import Lattice
+from ..config.lattice import Lattice
 
 class LammpsDumpReader:
     """LAMMPS Dump文件读取器类"""

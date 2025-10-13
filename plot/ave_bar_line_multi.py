@@ -4,29 +4,38 @@ import matplotlib.ticker as ticker
 
 # 1. Data preparation
 data1 = np.array([
-    [1306.4,1305.4,1310.8,1308.7],
-    [1301.0,1310.5,1305.3,1306],
-    [1303.3,1300.9,1296.5,1305.2],
-    [1306.1,1298.8,1297.9,1301.0],
+    [5.345322, 5.246334, 5.840259],
+    [4.685405, 5.411313, 4.619414],
+    [2.870636, 3.068611, 2.969623],
+    [1.029469, 1.544204, 1.425419],
 ])
 
 data2 = np.array([
-    [1308.0,1310.0,1324.7,1306.2],
-    [1302.5,1308.6,1318.1,1310],
-    [1313.2,1308.1,1305.4,1305.4],
-    [1297.3,1308.1,1301.1,1304.2],
+    [2.078736, 2.573673, 2.52418],
+    [1.821369, 2.415293, 2.336104],
+    [1.346229, 1.227444, 1.227444],
+    [-2.454888, -1.583799, -2.256914],
 ])
 
-x = np.array([1.05, 1.10, 1.15, 1.20])
+data3 = np.array([
+    [2.870636, 3.217092, 1.930255],
+    [2.276711, 2.326205, 1.682786],
+    [1.504609, 1.583799, 1.029469],
+    [0.39595, 0.47514, 0.23757],
+])
+
+x = np.array([0.6, 0.7, 0.8, 0.9])
 
 # Put all datasets in a list
-all_data = [data1, data2]
+all_data = [data1, data2, data3]
 
 # Calculate mean and standard error across columns (per row)
 mean_vals1 = np.mean(data1, axis=1)
 stderr_vals1 = np.std(data1, axis=1, ddof=1) / np.sqrt(data1.shape[1])
 mean_vals2 = np.mean(data2, axis=1)
 stderr_vals2 = np.std(data2, axis=1, ddof=1) / np.sqrt(data2.shape[1])
+mean_vals3 = np.mean(data3, axis=1)
+stderr_vals3 = np.std(data3, axis=1, ddof=1) / np.sqrt(data2.shape[1])
 
 # Plot Settings
 # 1. Input Data
@@ -35,6 +44,8 @@ mean_values1 = mean_vals1
 y_error1 = stderr_vals1
 mean_values2 = mean_vals2
 y_error2 = stderr_vals2
+mean_values3 = mean_vals3
+y_error3 = stderr_vals3
 
 # 2. Plot error bars
 plt.figure(figsize=(6, 5))
@@ -48,8 +59,8 @@ alpha = 0.9                       # alpha: the transparency of the data point
 ## 2.2 line Size Setting
 linewidth = 2                   # line: the line width
 elinewidth = 2                  # error bar: the error bar line width
-capsize = 8                     # error bar: the error bar head size
-markersize = 20                 # marker: the data point size
+capsize = 10                     # error bar: the error bar head size
+markersize = 13                 # marker: the data point size
 ## 2.3 font Setting 
 ticksize = 20                   # ticks: the size of the tick labels
 labelsize = 20                  # labels: the size of the label
@@ -62,9 +73,9 @@ plt.rcParams.update({
     "legend.fontsize": legendsize,
 })
 ## 2.4 labels setting
-plt.xlabel(f'c')
-plt.ylabel(r'$T_{\mathrm{m}}$ (K)')
-label = ['b = 0.8', 'b = 0.9']
+plt.xlabel(r'$T/T_{\mathrm{m}}$')
+plt.ylabel(r'$U$ (m/s)')
+label = ['Cube', 'Kelvin', "Schwarz"]
 
 for i, data in enumerate(all_data):
     mean_vals = np.mean(data, axis=1)
@@ -75,9 +86,10 @@ for i, data in enumerate(all_data):
         color=rgb[i % len(rgb)], ecolor=rgb[i % len(rgb)],
         markerfacecolor=markerfacecolor, markeredgecolor=rgb[i % len(rgb)],
         elinewidth=elinewidth, capsize=capsize,
-        markersize=markersize, linewidth=linewidth, alpha = alpha, zorder=5
+        markersize=markersize, linewidth=linewidth, alpha = alpha, zorder=7
     )
     plt.plot(x, mean_vals, linewidth=linewidth, color=rgb[i % len(rgb)], linestyle=linestyles[i % len(linestyles)], label=label[i], zorder=3)
+plt.axhline(y = 0, color=(115/255, 115/255, 115/255), linestyle=':', linewidth=linewidth, alpha = alpha)
 
 # 2.5 tick setting
 framewidth = 1.5                # frame: the frame line width
@@ -85,18 +97,19 @@ ax = plt.gca()
 for spine in ax.spines.values():
     spine.set_linewidth(framewidth)
 
-major_x_spacing = 0.05
-major_y_spacing = 5
+major_x_spacing = 0.1
+major_y_spacing = 2.0
 ax.xaxis.set_major_locator(ticker.MultipleLocator(major_x_spacing))
 ax.yaxis.set_major_locator(ticker.MultipleLocator(major_y_spacing))
 ax.xaxis.set_minor_locator(ticker.MultipleLocator(major_x_spacing / 2))
 ax.yaxis.set_minor_locator(ticker.MultipleLocator(major_y_spacing / 2))
+ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
 ax.tick_params(axis='both', which='major', length=8, width=1.5, direction='in')
 ax.tick_params(axis='both', which='minor', length=4, width=1.5, direction='in')
-ax.set_xlim(1.025, 1.225)
-ax.set_ylim(1297.5, 1317.5)
-ax.legend(frameon=False)
+ax.set_xlim(0.55, 0.95)
+ax.set_ylim(-3, 6)
+ax.legend(frameon=True)
 
-plt.savefig('ave_stderr.svg', format='svg', dpi=300, bbox_inches='tight')
+plt.savefig('growth.svg', format='svg', dpi=300, bbox_inches='tight')
 plt.tight_layout()
 plt.show()

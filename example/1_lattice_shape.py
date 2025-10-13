@@ -1,3 +1,7 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 from crystalops.config.lattice import *
 from crystalops.config.element import get_element
 from crystalops.users.lattice_shape import *
@@ -18,17 +22,17 @@ print(get_element('Cu'))
 #     )
 
 # Test2: generate_lattice_kelvin_shape
-for idx, i in enumerate(np.linspace(0, 0.2, 10), start=1):
-    print(idx)
-    kelvin = generate_lattice_kelvin_shape(    
-        base_lattice=FCC(), 
-        shape_lattice=BCM(1, 1.1, 1.2, 60),    
-        size=11.7+i, 
-        lattice_constant=3.61,
-        file_name=f'kelvin_{BCM().name}_{idx}',
-        element=['Cu'],
-        twin_type = 'DSC1'
-    )
+# for idx, i in enumerate(np.linspace(0, 0.2, 10), start=1):
+#     print(idx)
+#     kelvin = generate_lattice_kelvin_shape(    
+#         base_lattice=FCC(), 
+#         shape_lattice=BCM(1, 0.9, 1.1, 60),    
+#         size=12.9+i, 
+#         lattice_constant=3.61,
+#         file_name=f'kelvin_{BCM().name}_{idx}',
+#         element=['Cu'],
+#         twin_type = 'DSC1'
+#     )
 
 # Test3: generate_lattice_face_shape
 # for idx, i in enumerate(np.linspace(0, 0.5, 10), start=1):
@@ -42,15 +46,15 @@ for idx, i in enumerate(np.linspace(0, 0.2, 10), start=1):
 #         element=['Cu'],
 #     )
 
-# choose_type = 'anti_NAB'
-# FCC_DSC =  generate_lattice_kelvin_shape(    
-#     base_lattice=FCC(), 
-#     shape_lattice=BCC(), 
-#     size=13.6, 
-#     file_name = choose_type + '_Kelvin',
-#     element=['Cu'],
-#     twin_type = choose_type
-# )
+choose_type = 'FCC'
+FCC_DSC =  generate_lattice_kelvin_shape(    
+    base_lattice=FCC(), 
+    shape_lattice=BCC(), 
+    size=14, 
+    file_name = choose_type + '_Kelvin',
+    element=['Cu'],
+    twin_type = choose_type
+)
 
 # move_positions = Duplicate(BCT(1.7), 2, 2, 2)
 # # print(move_positions.point)

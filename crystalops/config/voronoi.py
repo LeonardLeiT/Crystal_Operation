@@ -47,7 +47,7 @@ def compute_voronoi_face_centers(points, box_vectors = np.eye(3), center_index=0
                     if len(face) >= 3:  # 至少是一个面
                         faces.append(face)
                 except ValueError:
-                    continue  # 某个 ridge vertex 不在 region 中，跳过
+                    continue
         return vertices, faces
     
 import matplotlib.pyplot as plt
@@ -89,11 +89,70 @@ def plot_voronoi_polyhedron(vertices, faces, color='skyblue', edge_color='k', al
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
     ax.set_box_aspect([1, 1, 1])
-    ax.set_axis_off()
+    #ax.set_axis_off()
+    print(poly3d)
 
     if save_path:
         fig.savefig(
             f"{save_path}_voronoi.svg",
+            format='svg',
+            bbox_inches='tight',     
+            transparent=True,        
+            pad_inches=0             
+        )
+    plt.show()
+    
+def plot_voronoi_polycombine(vertices, faces, centers, save_path=None):
+    """
+    Visualize a Voronoi polyhedron with better 3D effect.
+
+    Parameters:
+        vertices (ndarray): (N, 3) vertex coordinates relative to the center atom
+        faces (List[List[int]]): list of face vertex indices
+    """
+    fig = plt.figure(figsize=(10, 10))
+    ax = fig.add_subplot(111, projection='3d')
+    ax.view_init(elev=20, azim=-16)
+    # Build each face
+    poly3d = [[vertices[idx] for idx in face] for face in faces]
+    show_vertices=True
+    
+    for face_center in centers:
+    # Voronoi vertex spheres
+        if show_vertices:
+            vertice_center = vertices + face_center
+            ax.scatter(vertice_center[:, 0], vertice_center[:, 1], vertice_center[:, 2],
+                    c='black', s=50, edgecolors='black', linewidths=0.5, depthshade=True, alpha=0.2)
+            
+        poly3d_c = [[vertices[idx] + face_center for idx in face] for face in faces]
+        collection = Poly3DCollection(poly3d_c, facecolors='grey', edgecolors='k', alpha=0.3, linewidths=0.4)
+        ax.add_collection3d(collection)
+        
+    if show_vertices:
+        ax.scatter(vertices[:, 0], vertices[:, 1], vertices[:, 2],
+                   c='red', s=100, edgecolors='black', linewidths=0.5, depthshade=True)
+    
+    collection = Poly3DCollection(poly3d, facecolors='red', edgecolors='k')
+    ax.add_collection3d(collection)
+
+    # Collect all vertices (including translations by centers)
+    # vertices_all = np.vstack([vertices + c for c in centers] + [vertices, [[0, 0, 0]]])
+
+    # max_range = (vertices_all.max(axis=0) - vertices_all.min(axis=0)).max() / 2.0
+    # mid = vertices_all.mean(axis=0)
+
+    # for axis, m in zip([ax.set_xlim, ax.set_ylim, ax.set_zlim], mid):
+    #     axis([m - max_range, m + max_range])
+
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+    ax.set_box_aspect([1, 1, 1])
+    ax.set_axis_off()
+
+    if save_path:
+        fig.savefig(
+            f"{save_path}_polycombine.svg",
             format='svg',
             bbox_inches='tight',     
             transparent=True,        

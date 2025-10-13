@@ -624,4 +624,3 @@ if __name__ == "__main__":
     lp.HCP(c=1.633)
 
     print("All lattice types tested.")
-
