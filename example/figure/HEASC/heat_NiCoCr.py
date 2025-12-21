@@ -6,22 +6,23 @@ from scipy.interpolate import make_interp_spline
 # 1. Data preparation
 # NiCoCr Random
 data1 = np.array([
-    [204.8, 458.3, 1034.5, 1280.1, 1200.4, 1330.3, 1354.2],
-    [207, 406, 1132, 1107.1, 1129.5, 1306, 1344.3],
-    [314.7, 514.5, 1096.1, 947.4, 924.6, 1279.3, 1339]
+    [204.8, 458.3, 1034.5, 1280.1, 1200.4, 1330.3, 1354.2, 1380.5],
+    [207, 406, 1132, 1107.1, 1129.5, 1306, 1344.3, 1345.2],
+    [314.7, 514.5, 1096.1, 947.4, 924.6, 1279.3, 1339, 1363.1]
 ])
+
 # NiCoCr MC
 data2 = np.array([
-    [424.292, 650.637, 1215.12, 1357.48, 1325.49, 1361.73, 1372.07],
-    [372.474, 796.959, 1198.47, 1315.28, 1324.58, 1365.65, 1365.24],
-    [341.1, 1036, 1236, 1310.3, 1337.3, 1367.5, 1366.9]
+    [424.292, 650.637, 1215.12, 1357.48, 1325.49, 1361.73, 1372.07, 1364.1],
+    [372.474, 796.959, 1198.47, 1315.28, 1324.58, 1365.65, 1365.24, 1378.5],
+    [341.1, 1036, 1236, 1310.3, 1337.3, 1367.5, 1366.9, 1372.9]
 ])
 
 # Put all datasets in a list
 all_data = [data1/1390, data2/1390]
 
 x_values = np.array([
-    [1.66, 2.04, 2.33, 2.57, 2.78, 3.03, 3.38],
+    [1.66, 2.04, 2.33, 2.57, 2.78, 3.03, 3.38, 4.06],
 ])
 
 # 2. Plot Settings
@@ -47,6 +48,10 @@ labelsize = 20                  # labels: the size of the label
 legendsize = 20                 # legends: the size of the legend
 plt.rcParams.update({
     "font.family": "Times New Roman",
+    "mathtext.fontset": "custom",
+    "mathtext.rm": "Times New Roman", 
+    "mathtext.it": "Times New Roman:italic",
+    "mathtext.bf": "Times New Roman:bold",
     "axes.labelsize": labelsize,
     "xtick.labelsize": ticksize,
     "ytick.labelsize": ticksize,
@@ -54,8 +59,8 @@ plt.rcParams.update({
 })
 
 ## 2.4 labels setting
-plt.ylabel(r'$T/T_{\mathrm{m}}$')
-plt.xlabel(r'$D_S$ (nm)')
+plt.ylabel(r'$\mathrm{T / T_m}$')
+plt.xlabel(r'$\mathrm{D_S}$ (nm)')
 labels = ['NiCoCr-Random', 'NiCoCr-MDMC']
 
 ## 2.5 Plot Figure
@@ -92,12 +97,12 @@ ax.yaxis.set_minor_locator(ticker.MultipleLocator(major_y_spacing / 2))
 ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
 ax.tick_params(axis='both', which='major', length=8, width=1.5, direction='in')
 ax.tick_params(axis='both', which='minor', length=4, width=1.5, direction='in')
-ax.set_xlim(1.5, 3.8)
+ax.set_xlim(1.51, 4.2)
 ax.set_ylim(0, 1.1)
 ax.legend(frameon=False)
 
 
 plt.tight_layout()
-plt.savefig("NiCoCr.svg", bbox_inches='tight')
-plt.savefig("NiCoCr.pdf", bbox_inches='tight')
+plt.savefig("heat-NiCoCr.svg", bbox_inches='tight')
+plt.savefig("heat-NiCoCr.pdf", bbox_inches='tight')
 plt.show()

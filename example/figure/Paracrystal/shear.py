@@ -3,14 +3,15 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
 # 1. Data preparation
+shear_axis = 'XY'
 data = {}
-data[0] = np.loadtxt(f'xtal/data/strain_Z_300_0.txt')
-data[1] = np.loadtxt(f'amorphous-1/data/strain_Z_300_0.txt')
-data[2] = np.loadtxt(f'polycrystal-10/data/strain_Z_300_0.txt')
-data[3] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_Z_300_0.txt')
-data[4] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_Z_300_8.3.txt')
-data[5] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_Z_300_0.txt')
-data[6] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_Z_300_15.9.txt')
+data[0] = np.loadtxt(f'xtal/data/strain_{shear_axis}_300_0.txt')
+data[1] = np.loadtxt(f'amorphous-1/data/strain_{shear_axis}_300_0.txt')
+data[2] = np.loadtxt(f'polycrystal-10/data/strain_{shear_axis}_300_0.txt')
+data[3] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_{shear_axis}_300_0.txt')
+data[4] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_{shear_axis}_300_8.3.txt')
+data[5] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_{shear_axis}_300_0.txt')
+data[6] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_{shear_axis}_300_15.9.txt')
 
 # 2. Plot Settings
 plt.figure(figsize=(6.5, 5))
@@ -45,26 +46,21 @@ plt.rcParams.update({
 plt.xlabel('Strain (%)')
 plt.ylabel('Stress (GPa)')
 label = ["Xtal", "Glassy", "Poly", "Para-3.3-0", "Para-3.3-8", "Para-3.5-0", "Para-3.5-16"]
-# label = ["Paracrystalline-0", "Paracrystalline-15", "Paracrystalline"]
 
 for i in range(len(data)):
     strain = data[i][:, 0]
     stress = data[i][:, 1]
-    strain = strain - strain[0]
-    stress = stress - stress[0]
-    # print(len(strain), len(stress))
-    # print(f"Strain range: {strain.min():.4f} to {strain.max():.4f}")
     # ---- Select elastic region cutoff: strain < 0.20 ----
-    mask = strain < 0.03
+    mask = strain < 0.04
     strain_elastic = strain[mask]
     stress_elastic = stress[mask]
-    # print(len(strain_elastic), len(stress_elastic))
+
     # Linear fit y = kx (Young's modulus)
     k, _ = np.polyfit(strain_elastic, stress_elastic, 1)
     print(f"{label[i]}: Young's modulus E = {k:.3f} GPa")
 
     # Fitted line for plotting
-    strain_fit = np.linspace(0, 0.03, 200)
+    strain_fit = np.linspace(0, 0.05, 200)
     stress_fit = k * strain_fit
 
     # Raw curve
@@ -73,7 +69,7 @@ for i in range(len(data)):
     plt.plot(strain_fit * 100, stress_fit,
              linestyle='--',
              linewidth=linewidth,
-             color=rgb[i % len(rgb)])
+             color=rgb[i])
 
 # 2.5 tick setting
 framewidth = 1.5                # frame: the frame line width
@@ -81,8 +77,8 @@ ax = plt.gca()
 for spine in ax.spines.values():
     spine.set_linewidth(framewidth)
     
-major_x_spacing = 3
-major_y_spacing = 2
+major_x_spacing = 2
+major_y_spacing = 1
 ax.xaxis.set_major_locator(ticker.MultipleLocator(major_x_spacing))
 ax.yaxis.set_major_locator(ticker.MultipleLocator(major_y_spacing))
 ax.xaxis.set_minor_locator(ticker.MultipleLocator(major_x_spacing / 2))
@@ -91,11 +87,11 @@ ax.tick_params(axis='both', which='major', length=8, width=1.5, direction='in')
 ax.tick_params(axis='both', which='minor', length=4, width=1.5, direction='in')
 ax.xaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
 ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
-ax.set_xlim(0, 15)
-ax.set_ylim(0.01, 14)
+ax.set_xlim(0, 8)
+ax.set_ylim(0.01, 6)
 ax.legend(frameon=True)
 
-plt.savefig('tensile.svg', format='svg', dpi=300, bbox_inches='tight')
-plt.savefig('tensile.pdf', format='pdf', dpi=300, bbox_inches='tight')
+plt.savefig(f'shear-{shear_axis}.svg', format='svg', dpi=300, bbox_inches='tight')
+plt.savefig(f'shear-{shear_axis}.pdf', format='pdf', dpi=300, bbox_inches='tight')
 plt.tight_layout()
 plt.show()

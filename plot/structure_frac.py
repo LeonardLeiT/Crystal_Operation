@@ -5,8 +5,8 @@ import pandas as pd
 import matplotlib.patches as patches
 
 # 1. Data preparation
-Stru_name = 'FCC'
-Stru_index = 2 + 6
+Stru_name = 'Other'
+Stru_index = 2  # Other 2 FCC +6 HCP +6 
 data = pd.read_excel('FiNiCrCoCu_structure_fraction.xlsx')
 print(data.info)
 
@@ -26,9 +26,9 @@ linewidth = 2.0
 marker_size = 200
 
 ## 2.3 font Setting 
-ticksize = 26
-labelsize = 26
-legendsize = 20
+ticksize = 35
+labelsize = 35
+legendsize = 25
 plt.rcParams.update({
     "font.family": "Times New Roman",
     "mathtext.fontset": "custom",
@@ -42,7 +42,7 @@ plt.rcParams.update({
 })
 
 ## 2.4 labels setting
-fig, ax1 = plt.subplots(figsize=(27, 4))
+fig, ax1 = plt.subplots(figsize=(27, 5.3))
 
 # Left y-axis for Structure Fraction
 ax1.set_xlabel(r'$t$ (ns)')
@@ -102,7 +102,7 @@ ax2.tick_params(axis='both', which='minor', length=4, width=1.5, direction='in')
 ax1.set_xlim(0, 100)
 
 ax1.legend(loc="upper left")
-ax2.legend(bbox_to_anchor=(0, 0.8), loc="upper left", ncol=3)
+ax2.legend(bbox_to_anchor=(0, 0.84), loc="upper left", ncol=3, labelspacing=0.1, columnspacing=0.7) #, labelspacing=0.4,columnspacing=1
 
 x_min1, x_max1 = 0, 5
 y_min1, y_max1 = 15, 25
@@ -145,7 +145,7 @@ ax2.add_patch(rect)
 
 # 3. add subgraph
 left = 0.39
-bottom = 0.38  # Other 0.48 HCP 0.45 FCC 0.38
+bottom = 0.48  # Other 0.48 HCP 0.45 FCC 0.38
 # Setting Position [left, bottom, width, height] 
 subax_left = plt.axes([left, bottom, 0.08, 0.35])
 subax_left.set_zorder(2)

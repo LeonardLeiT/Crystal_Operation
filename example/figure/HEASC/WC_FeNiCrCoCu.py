@@ -41,8 +41,8 @@ rgb = [(181, 206, 78), (151, 208, 197), (247, 172, 83), (145, 204, 192), (236, 1
        (82, 170, 220), (199, 193, 222), (238, 182 ,212), (200, 151, 54), (45, 136, 117)]
 rgb = [(r/255, g/255, b/255) for r, g, b in rgb]
 markers = ['o', 's', '^', 'D', '*', 'v', '>']
-# linestyles = ['-', '--', '-.', ':']
-linestyles = ['-', '--', '-.']
+linestyles = ['-', '--', '-.', ':']
+
 markerfacecolor = 'white'       # color: the color in the data point
 alpha = 0.9                     # alpha: the transparency of the data point
 

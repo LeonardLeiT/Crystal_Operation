@@ -1,6 +1,5 @@
 import os
-os.environ['QT_QPA_PLATFORM'] = 'offscreen'
-
+import matplotlib
 from ovito.io import import_file
 import numpy as np
 from collections import defaultdict
@@ -89,7 +88,7 @@ class NeighborAnalyzer:
 
         for nframe in range(nframes):
             data = pipeline.compute(nframe)
-            timestep = data.attributes['Timestep']
+            timestep = data.attributes['Ti  mestep']
             self.timesteps.append(timestep)  
             positions = data.particles.positions
             types = data.particles['Particle Type']  
@@ -403,18 +402,82 @@ class NeighborAnalyzer:
             print(f"Results saved to {excel_file}")
 
         return results_df
-                
 
 
+import matplotlib.pyplot as plt
+import numpy as np
+from scipy.stats import gaussian_kde
+from scipy.optimize import curve_fit
 
-        
+# ---- Gaussian function for curve fitting ----
+def gaussian(x, a, x0, sigma):
+    return a * np.exp(-(x - x0)**2 / (2 * sigma**2))
 
 
+def plot_Fe_CN_frame0_with_fit(analyzer, e_type=0, frame=0, bins=15, use_gaussian_fit=True, savefig=None):
+    """
+    绘制第一帧 Fe 配位数直方图 + 拟合曲线（Gaussian 或 KDE）
+    """
+
+    # --- Load data ---
+    frame = 0
+    types = np.array(analyzer.types[frame])
+    cn = np.array(analyzer.coordination[frame])
+    Fe_CN = cn[types == e_type]     # Fe type == 4
+
+    if len(Fe_CN) == 0:
+        print("No Fe atoms found.")
+        return
+
+    # --- Histogram data ---
+    counts, bin_edges = np.histogram(Fe_CN, bins=bins, density=True)
+    bin_centers = 0.5 * (bin_edges[:-1] + bin_edges[1:])
+
+    plt.figure(figsize=(6, 4))
+
+    # --- Draw points like your image ---
+    plt.plot(bin_centers, counts, "o", color="blue", label="Fe histogram")
+
+    # =====================================================
+    # Option A: Gaussian best-fit curve
+    # =====================================================
+    if use_gaussian_fit:
+        # initial guess: peak height, mean, std
+        p0 = [max(counts), np.mean(Fe_CN), np.std(Fe_CN)]
+        popt, _ = curve_fit(gaussian, bin_centers, counts, p0=p0)
+
+        x_fit = np.linspace(min(bin_edges), max(bin_edges), 200)
+        y_fit = gaussian(x_fit, *popt)
+
+        plt.plot(x_fit, y_fit, color="blue", linewidth=2,
+                 label=f"Gaussian fit\nμ={popt[1]:.2f}, σ={popt[2]:.2f}")
+
+    else:
+        # =====================================================
+        # Option B: KDE smoothing curve (non-parametric)
+        # =====================================================
+        kde = gaussian_kde(Fe_CN)
+        x_fit = np.linspace(min(bin_edges), max(bin_edges), 300)
+        y_kde = kde.evaluate(x_fit)
+        plt.plot(x_fit, y_kde, color="blue", linewidth=2, label="KDE smoothing")
+
+    # Formatting
+    plt.xlabel("Coordination Number (CN)", fontsize=12)
+    plt.ylabel("Probability Density", fontsize=12)
+    plt.title("Fe Coordination Number Distribution (Frame 0)", fontsize=13)
+    plt.legend()
+
+    if savefig:
+        plt.savefig(savefig, dpi=300, bbox_inches='tight')
+
+    plt.show()
+
+    return Fe_CN
 
 
     
 # === Example usage ===
 if __name__ == "__main__":
-    analyzer = NeighborAnalyzer("relax-4242-700.dump", cutoff_radius=3.5)
+    analyzer = NeighborAnalyzer("Equli_1000_15.data", cutoff_radius=3.5)
     results = analyzer.load_neighbor()
     analyzer.Warren_Cowley('FiNiCrCoCu', sample=1, type_to_element={1: "Co", 2: "Cr", 3: "Cu", 4: "Fe", 5: "Ni"})

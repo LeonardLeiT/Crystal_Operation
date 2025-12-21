@@ -6,22 +6,23 @@ from scipy.interpolate import make_interp_spline
 # 1. Data preparation
 # FeNiCrCoCu Random
 data1 = np.array([
-    [211.4, 667.7, 1785, 1788.4, 1875.4, 1788.1, 1930.4],
-    [267.4, 229.6, 1519, 1769.8, 1767.7, 1918.4, 1861.1],
-    [175.6, 845.4, 1364.4, 1841.5, 1562.9, 1924.5, 1900.3]
+    [211.4, 667.7, 1785, 1788.4, 1875.4, 1788.1, 1930.4, 1941.4],
+    [267.4, 229.6, 1519, 1769.8, 1767.7, 1918.4, 1861.1, 1931.7],
+    [175.6, 845.4, 1364.4, 1841.5, 1562.9, 1924.5, 1900.3, 1968.1]
 ])
+
 # FeNiCrCoCu MC
 data2 = np.array([
-    [1015.55, 1291.7, 1763.02, 1876.75, 1881.33, 1903.89,1951.93],
-    [1112.1, 1202.49, 1646.86, 1845.36, 1774.94, 1950.39, 1964.65],
-    [950.4, 1311.2, 1778.6, 1848, 1932.5, 1799, 1969.6]
+    [1015.55, 1291.7, 1763.02, 1876.75, 1881.33, 1903.89,1951.93, 1986.2],
+    [1112.1, 1202.49, 1646.86, 1845.36, 1774.94, 1950.39, 1964.65, 1942.4],
+    [950.4, 1311.2, 1778.6, 1848, 1932.5, 1799, 1969.6, 1976.1]
 ])
 
 # Put all datasets in a list
-all_data = [data1/2160, data2/2160]
+all_data = [data1/2120, data2/2120]
 
 x_values = np.array([
-    [1.67, 2.04, 2.34, 2.58, 2.78, 3.04, 3.39],
+    [1.67, 2.04, 2.34, 2.58, 2.78, 3.04, 3.39, 4.06],
 ])
 
 # 2. Plot Settings
@@ -47,6 +48,10 @@ labelsize = 20                  # labels: the size of the label
 legendsize = 20                 # legends: the size of the legend
 plt.rcParams.update({
     "font.family": "Times New Roman",
+    "mathtext.fontset": "custom",
+    "mathtext.rm": "Times New Roman", 
+    "mathtext.it": "Times New Roman:italic",
+    "mathtext.bf": "Times New Roman:bold",
     "axes.labelsize": labelsize,
     "xtick.labelsize": ticksize,
     "ytick.labelsize": ticksize,
@@ -54,8 +59,8 @@ plt.rcParams.update({
 })
 
 ## 2.4 labels setting
-plt.ylabel(r'$T/T_{\mathrm{m}}$')
-plt.xlabel(r'$D_S$ (nm)')
+plt.ylabel(r'$\mathrm{T / T_m}$')
+plt.xlabel(r'$\mathrm{D_S}$ (nm)')
 labels = ['FeNiCrCoCu-Random', 'FeNiCrCoCu-MDMC']
 
 ## 2.5 Plot Figure
@@ -92,12 +97,12 @@ ax.yaxis.set_minor_locator(ticker.MultipleLocator(major_y_spacing / 2))
 ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
 ax.tick_params(axis='both', which='major', length=8, width=1.5, direction='in')
 ax.tick_params(axis='both', which='minor', length=4, width=1.5, direction='in')
-ax.set_xlim(1.5, 3.8)
+ax.set_xlim(1.51, 4.2)
 ax.set_ylim(0, 1.1)
 ax.legend(frameon=False)
 
 
 plt.tight_layout()
-plt.savefig("FeNiCrCoCu.svg", bbox_inches='tight')
-plt.savefig("FeNiCrCoCu.pdf", bbox_inches='tight')
+plt.savefig("heat-FeNiCrCoCu.svg", bbox_inches='tight')
+plt.savefig("heat-FeNiCrCoCu.pdf", bbox_inches='tight')
 plt.show()

@@ -48,8 +48,8 @@ label = ["Xtal", "Glassy", "Poly", "Para-3.3-0", "Para-3.3-8", "Para-3.5-0", "Pa
 # label = ["Paracrystalline-0", "Paracrystalline-15", "Paracrystalline"]
 
 for i in range(len(data)):
-    strain = data[i][:, 0]
-    stress = data[i][:, 1]
+    strain = data[i][:, 0] * -1
+    stress = data[i][:, 1] * -1
     strain = strain - strain[0]
     stress = stress - stress[0]
     # print(len(strain), len(stress))
@@ -82,7 +82,7 @@ for spine in ax.spines.values():
     spine.set_linewidth(framewidth)
     
 major_x_spacing = 3
-major_y_spacing = 2
+major_y_spacing = 3
 ax.xaxis.set_major_locator(ticker.MultipleLocator(major_x_spacing))
 ax.yaxis.set_major_locator(ticker.MultipleLocator(major_y_spacing))
 ax.xaxis.set_minor_locator(ticker.MultipleLocator(major_x_spacing / 2))
@@ -91,11 +91,12 @@ ax.tick_params(axis='both', which='major', length=8, width=1.5, direction='in')
 ax.tick_params(axis='both', which='minor', length=4, width=1.5, direction='in')
 ax.xaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
 ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
-ax.set_xlim(0, 15)
-ax.set_ylim(0.01, 14)
+ax.set_xlim(0, 18)
+ax.set_ylim(0.01, 18)
+# ax.set_ylim(-5, 14)
 ax.legend(frameon=True)
 
-plt.savefig('tensile.svg', format='svg', dpi=300, bbox_inches='tight')
-plt.savefig('tensile.pdf', format='pdf', dpi=300, bbox_inches='tight')
+plt.savefig('compress.svg', format='svg', dpi=300, bbox_inches='tight')
+plt.savefig('compress.pdf', format='pdf', dpi=300, bbox_inches='tight')
 plt.tight_layout()
 plt.show()
