@@ -5,13 +5,14 @@ import matplotlib.ticker as ticker
 # 1. Data preparation
 shear_axis = 'XY'
 data = {}
-data[0] = np.loadtxt(f'xtal/data/strain_{shear_axis}_300_0.txt')
-data[1] = np.loadtxt(f'amorphous-1/data/strain_{shear_axis}_300_0.txt')
-data[2] = np.loadtxt(f'polycrystal-10/data/strain_{shear_axis}_300_0.txt')
-data[3] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_{shear_axis}_300_0.txt')
-data[4] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_{shear_axis}_300_8.3.txt')
-data[5] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_{shear_axis}_300_0.txt')
-data[6] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_{shear_axis}_300_15.9.txt')
+data[0] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_{shear_axis}_300_0.txt')
+# data[0] = np.loadtxt(f'xtal/data/strain_{shear_axis}_300_0.txt')
+# data[1] = np.loadtxt(f'amorphous-1/data/strain_{shear_axis}_300_0.txt')
+# data[2] = np.loadtxt(f'polycrystal-10/data/strain_{shear_axis}_300_0.txt')
+# data[3] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_{shear_axis}_300_0.txt')
+# data[4] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_{shear_axis}_300_8.3.txt')
+# data[5] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_{shear_axis}_300_0.txt')
+# data[6] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_{shear_axis}_300_15.9.txt')
 
 # 2. Plot Settings
 plt.figure(figsize=(6.5, 5))
@@ -51,7 +52,7 @@ for i in range(len(data)):
     strain = data[i][:, 0]
     stress = data[i][:, 1]
     # ---- Select elastic region cutoff: strain < 0.20 ----
-    mask = strain < 0.04
+    mask = strain < 0.005
     strain_elastic = strain[mask]
     stress_elastic = stress[mask]
 

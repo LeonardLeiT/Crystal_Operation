@@ -1,7 +1,7 @@
 from ovito.io import import_file
 from ovito.modifiers import CoordinationAnalysisModifier
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 class RDFAnalyzer:
     """
@@ -127,7 +127,8 @@ class RDFAnalyzer:
         self.S_Q = np.zeros_like(self.Q_values)
         for i, Q in enumerate(self.Q_values):
             integrand = (self.g_r - 1.0) * np.sin(Q * self.r) / (Q * self.r) * self.r**2
-            self.S_Q[i] = 1 + 4 * np.pi * rho * np.trapz(integrand, self.r)
+            # self.S_Q[i] = 1 + 4 * np.pi * rho * np.trapz(integrand, self.r)
+            self.S_Q[i] = 1 + 4 * np.pi * rho * np.trapezoid(integrand, self.r)
         print("Structure factor S(Q) computed successfully.")
         if outputfile:
             self._save_structure_factor(outputfile)
@@ -142,9 +143,9 @@ if __name__ == "__main__":
     #     analyzer = RDFAnalyzer(f"{struc}.data", cutoff=20.0, number_of_bins=200)
     #     analyzer.compute_rdf(outputfile=struc)
     #     analyzer.compute_SQ(outputfile=struc, rho=0.05)
-    structure = ['xtal', 'paracrystal-3', 'amorphous-1']
-    structure = ['min_700_0']
+    structure = ['glass-300-2.751', 'para-300-3.346-1', 'para-300-3.346-2', 'para-300-3.346-3', 'para-300-3.346-4', 'para-300-3.346-5', 'xtal-300']
+    # structure = ['min_700_0']
     for struc in structure:
-        analyzer = RDFAnalyzer(f"{struc}.data", cutoff=20.0, number_of_bins=200)
-        analyzer.compute_rdf(outputfile=struc)
-        analyzer.compute_SQ(outputfile=struc)
+        analyzer = RDFAnalyzer(f"model/{struc}.lmp", cutoff=20.0, number_of_bins=200)
+        analyzer.compute_rdf(outputfile=f'RDF/{struc}')
+        analyzer.compute_SQ(outputfile=f'SQ/{struc}')

@@ -1,8 +1,10 @@
 from ovito.io import import_file, export_file
 from ovito.data import CutoffNeighborFinder
 import numpy as np 
-from scipy.special import sph_harm
+from scipy.special import sph_harm_y
 import csv
+import scipy
+print(scipy.__version__)
 
 class BOO:
     """
@@ -74,7 +76,8 @@ class BOO:
         # Compute spherical harmonics
         Y = np.zeros((2 * self.l + 1, len(d_ij)), dtype=complex)
         for m in range(-self.l, self.l + 1):
-            Y[m + self.l] = sph_harm(m, self.l, phi, theta)
+            Y[m + self.l] = sph_harm_y(self.l, m, theta, phi)
+            # Y[m + self.l] = sph_harm(m, self.l, phi, theta)
 
         # Construct Steinhard vector by summing spherical harmonics.
         qlm = np.zeros((natoms, 2 * self.l + 1), dtype=complex)
@@ -260,8 +263,7 @@ class BOO:
                 export_file(data,
                             f'{outputfile}_alpha_{frame}.dump',
                             'lammps/dump',
-                            columns=["Particle Identifier", "Particle Type", "Position.X",
-                                    "Position.Y", "Position.Z", 'alpha'])
+                            columns=["Particle Identifier", "Particle Type", "Position.X", "Position.Y", "Position.Z", 'alpha'])
         print(f"Computed alpha {self.l} for {self.n_frames} frames, shape = {alpha.shape}")
         return alpha
     
@@ -269,11 +271,13 @@ class BOO:
 
 # Example usage
 if __name__ == "__main__":
-    structure = ['xtal', 'amorphous-1', 'paracrystal-1']
-    structure = ['min_500_0', 'min_700_0']
+    structure = ['glass-300-2.751', 'para-300-3.346-1', 'para-300-3.346-2', 'para-300-3.346-3', 'para-300-3.346-4', 'para-300-3.346-5', 'xtal-300']
+    structure = ['xtal']
+    structure = ['min_500_0']
     for s in structure:
-        boo = BOO(dumpfile=f'{s}.data', cutoff=3)
+        print(s)
+        boo = BOO(dumpfile=f'model/{s}.data', cutoff=3)
         # qlm = boo.qlm()
-        ql = boo.ql(outputfile=s)
+        ql = boo.ql(outputfile=f'ql/{s}')
         # qij = boo.qij(outputfile=s)
-        alpha = boo.alpha(outputfile=s, qq_cut=0.2)
+        alpha = boo.alpha(outputfile=f'alpha/{s}', qq_cut=0.2)

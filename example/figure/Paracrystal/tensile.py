@@ -4,13 +4,33 @@ import matplotlib.ticker as ticker
 
 # 1. Data preparation
 data = {}
-data[0] = np.loadtxt(f'xtal/data/strain_Z_300_0.txt')
-data[1] = np.loadtxt(f'amorphous-1/data/strain_Z_300_0.txt')
-data[2] = np.loadtxt(f'polycrystal-10/data/strain_Z_300_0.txt')
-data[3] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_Z_300_0.txt')
-data[4] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_Z_300_8.3.txt')
-data[5] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_Z_300_0.txt')
-data[6] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_Z_300_15.9.txt')
+# cell = 15
+density = 3.346
+GPa = 6
+time = 3
+# density1 = 2.751
+# GPa1 = 1
+# data[0] = np.loadtxt(f'NVT/glass_300_{density}_{GPa}/X/data/strain_300_{density}_{GPa}.txt')
+# data[1] = np.loadtxt(f'NVT/glass_300_{density}_{GPa}/Y/data/strain_300_{density}_{GPa}.txt')
+# data[2] = np.loadtxt(f'NVT/glass_300_{density}_{GPa}/Z/data/strain_300_{density}_{GPa}.txt')
+
+data[0] = np.loadtxt(f'NVT/para_300_{density}_{GPa}_{time}/X/data/strain_300_{density}_{GPa}.txt')
+data[1] = np.loadtxt(f'NVT/para_300_{density}_{GPa}_{time}/Y/data/strain_300_{density}_{GPa}.txt')
+data[2] = np.loadtxt(f'NVT/para_300_{density}_{GPa}_{time}/Z/data/strain_300_{density}_{GPa}.txt')
+
+# data[0] = np.loadtxt(f'para_300_{density}_{GPa}_{time}/X/data/strain_300_{density}_{GPa}.txt')
+# data[1] = np.loadtxt(f'para_300_{density}_{GPa}_{time}/Y/data/strain_300_{density}_{GPa}.txt')
+# data[2] = np.loadtxt(f'para_300_{density}_{GPa}_{time}/Z/data/strain_300_{density}_{GPa}.txt')
+# data[3] = np.loadtxt(f'para_300_{density}_{GPa}_{time}/XY/data/strain_300_{density}_{GPa}.txt')
+# data[4] = np.loadtxt(f'para_300_{density}_{GPa}_{time}/XZ/data/strain_300_{density}_{GPa}.txt')
+# data[5] = np.loadtxt(f'para_300_{density}_{GPa}_{time}/YZ/data/strain_300_{density}_{GPa}.txt')
+# data[0] = np.loadtxt(f'xtal/data/strain_Z_300_0.txt')
+# data[1] = np.loadtxt(f'amorphous-1/data/strain_Z_300_0.txt')
+# data[2] = np.loadtxt(f'polycrystal-10/data/strain_Z_300_0.txt')
+# data[3] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_Z_300_0.txt')
+# data[4] = np.loadtxt(f'polycrystal-10-3.34-8/data/strain_Z_300_8.3.txt')
+# data[5] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_Z_300_0.txt')
+# data[6] = np.loadtxt(f'polycrystal-10-3.56-16/data/strain_Z_300_15.9.txt')
 
 # 2. Plot Settings
 plt.figure(figsize=(6.5, 5))
@@ -44,8 +64,9 @@ plt.rcParams.update({
 ## 2.4 labels setting
 plt.xlabel('Strain (%)')
 plt.ylabel('Stress (GPa)')
-label = ["Xtal", "Glassy", "Poly", "Para-3.3-0", "Para-3.3-8", "Para-3.5-0", "Para-3.5-16"]
+# label = ["Xtal", "Glassy", "Poly", "Para-3.3-0", "Para-3.3-8", "Para-3.5-0", "Para-3.5-16"]
 # label = ["Paracrystalline-0", "Paracrystalline-15", "Paracrystalline"]
+label = ["X", "Y", "Z", "XY", "XZ", "YZ"]
 
 for i in range(len(data)):
     strain = data[i][:, 0]
@@ -55,7 +76,7 @@ for i in range(len(data)):
     # print(len(strain), len(stress))
     # print(f"Strain range: {strain.min():.4f} to {strain.max():.4f}")
     # ---- Select elastic region cutoff: strain < 0.20 ----
-    mask = strain < 0.03
+    mask = strain < 0.004
     strain_elastic = strain[mask]
     stress_elastic = stress[mask]
     # print(len(strain_elastic), len(stress_elastic))
@@ -64,7 +85,7 @@ for i in range(len(data)):
     print(f"{label[i]}: Young's modulus E = {k:.3f} GPa")
 
     # Fitted line for plotting
-    strain_fit = np.linspace(0, 0.03, 200)
+    strain_fit = np.linspace(0, 0.1, 200)
     stress_fit = k * strain_fit
 
     # Raw curve
@@ -81,8 +102,8 @@ ax = plt.gca()
 for spine in ax.spines.values():
     spine.set_linewidth(framewidth)
     
-major_x_spacing = 3
-major_y_spacing = 2
+major_x_spacing = 1
+major_y_spacing = 1
 ax.xaxis.set_major_locator(ticker.MultipleLocator(major_x_spacing))
 ax.yaxis.set_major_locator(ticker.MultipleLocator(major_y_spacing))
 ax.xaxis.set_minor_locator(ticker.MultipleLocator(major_x_spacing / 2))
@@ -91,8 +112,8 @@ ax.tick_params(axis='both', which='major', length=8, width=1.5, direction='in')
 ax.tick_params(axis='both', which='minor', length=4, width=1.5, direction='in')
 ax.xaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
 ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
-ax.set_xlim(0, 15)
-ax.set_ylim(0.01, 14)
+ax.set_xlim(0, 5)
+ax.set_ylim(0.01, 5)
 ax.legend(frameon=True)
 
 plt.savefig('tensile.svg', format='svg', dpi=300, bbox_inches='tight')

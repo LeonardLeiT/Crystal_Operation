@@ -4,18 +4,17 @@ import matplotlib.ticker as ticker
 
 # 1. Data preparation
 data = {}
-data[0] = np.loadtxt(f'Equli_300_0_RDF.txt')
-data[1] = np.loadtxt(f'min_700_0_RDF.txt')
-data[2] = np.loadtxt(f'amorphous-1_RDF.txt')
+data[0] = np.loadtxt('RDF/para-300-3.346-1_RDF.txt')    # Paracrystalline
+data[1] = np.loadtxt('RDF/glass-300-2.751_RDF.txt')     # Glassy
 
 # 2. Plot Settings
 plt.figure(figsize=(6.5, 5))
 
 ## 2.1 Color Setting
-rgb = [(85, 103, 117), (232, 68, 69), (75, 101, 175), (128, 198, 109), (136, 135, 203), (251, 132, 2)]
+rgb = [(232, 68, 69), (75, 101, 175), (128, 198, 109), (136, 135, 203), (251, 132, 2)]
 rgb = [(r/255, g/255, b/255) for r, g, b in rgb]
 markers = ['o', 's', '^', 'D', '*']
-linestyles = ['--', '-', '-.', ':']
+linestyles = ['-', '-.', ':']
 
 # rgb = [(232, 68, 69), (75, 101, 175), (128, 198, 109), (136, 135, 203), (251, 132, 2)]
 # rgb = [(r/255, g/255, b/255) for r, g, b in rgb]
@@ -40,8 +39,8 @@ plt.rcParams.update({
 ## 2.4 labels setting
 plt.xlabel("r (Å)")
 plt.ylabel("g(r)")
-label = ["Xtal", "Paracrystalline", "Glassy"]
-# label = ["Paracrystalline", "Glassy"]
+# label = ["Xtal", "Paracrystalline", "Glassy"]
+label = ["Paracrystalline", "Glassy"]
 
 for i in range(len(data)):
     r = data[i][:, 0]
@@ -65,10 +64,10 @@ ax.tick_params(axis='both', which='minor', length=4, width=1.5, direction='in')
 ax.xaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
 ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.1f'))
 ax.set_xlim(0, 15)
-ax.set_ylim(0.001, 4.5)
+ax.set_ylim(0.001, 3.5)
 ax.legend(frameon=False)
 
-plt.savefig('rdf-all.svg', format='svg', dpi=300, bbox_inches='tight')
-plt.savefig('rdf-all.pdf', format='pdf', dpi=300, bbox_inches='tight')
+plt.savefig('rdf-binary.svg', format='svg', dpi=300, bbox_inches='tight')
+plt.savefig('rdf-binary.pdf', format='pdf', dpi=300, bbox_inches='tight')
 plt.tight_layout()
 plt.show()
