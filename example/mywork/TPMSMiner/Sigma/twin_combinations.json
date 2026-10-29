@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "pair_groups": ["Z12-Z12", "Z12-Z14", "Z14-Z14", "Z15-Z15"],
+  "rules": {
+    "sigma3": "60 degrees about <111>; positive twin-anchor candidate",
+    "sigma5": "36.86989764584402 degrees about <100>; negative control",
+    "shared_phase": "Both grains share an FCC lattice-site anchor at the true sigma-foam face center.",
+    "fixed_geometry": "All candidates use size=8.6, c/a=131/253, equal-volume Laguerre cells, and the same overlap cutoff."
+  },
+  "combinations": [
+    {
+      "id": "sigma_s3_all_reference",
+      "sigma3_groups": ["Z12-Z12", "Z12-Z14", "Z14-Z14", "Z15-Z15"],
+      "role": "positive_reference",
+      "hypothesis": "Maximum Sigma3 coverage across all sigma-foam cell classes."
+    },
+    {
+      "id": "sigma_s3_z12_only",
+      "sigma3_groups": ["Z12-Z12"],
+      "role": "class_selective",
+      "hypothesis": "Only Z12-Z12 faces are Sigma3 anchors."
+    },
+    {
+      "id": "sigma_s3_z14_only",
+      "sigma3_groups": ["Z14-Z14"],
+      "role": "class_selective",
+      "hypothesis": "Only Z14-Z14 faces are Sigma3 anchors."
+    },
+    {
+      "id": "sigma_s3_z15_only",
+      "sigma3_groups": ["Z15-Z15"],
+      "role": "class_selective",
+      "hypothesis": "Only Z15-Z15 faces are Sigma3 anchors."
+    },
+    {
+      "id": "sigma_s3_bridge_only",
+      "sigma3_groups": ["Z12-Z14"],
+      "role": "bridge_selective",
+      "hypothesis": "Only the two cross-class Z12-Z14 bridge faces are Sigma3 anchors."
+    },
+    {
+      "id": "sigma_s5_all_control",
+      "sigma3_groups": [],
+      "role": "negative_control",
+      "hypothesis": "No Sigma3 anchors; tests whether sigma-foam geometry alone drives transformation."
+    }
+  ]
+}

@@ -1,0 +1,1650 @@
+{
+  "schema_version": 1,
+  "fixed_size": 8.6,
+  "size_series_enabled": false,
+  "topology": "10xZ12 + 16xZ14 + 4xZ15",
+  "space_group": "P42/mnm",
+  "c_over_a": 0.5177865612648221,
+  "box_lengths": [
+    120.13304352415207,
+    120.13304352415207,
+    62.20327550064791
+  ],
+  "configuration_files": {
+    "sigma_all": "01_sigma_all.data",
+    "z12_representative_at_origin": "02_z12_cell_origin.data",
+    "z14_representative_at_origin": "03_z14_cell_origin.data",
+    "z15_representative_at_origin": "04_z15_cell_origin.data",
+    "z12_only": "05_sigma_z12_only.data",
+    "z14_only": "06_sigma_z14_only.data",
+    "z15_only": "07_sigma_z15_only.data"
+  },
+  "coordinate_convention": {
+    "center_reduced": "fractional coordinate in the primary tetragonal box",
+    "orientation_matrix_crystal_to_lab": "v_lab = O @ v_crystal",
+    "representative_cells": "geometric cell center translated to (0,0,0)",
+    "class_only_files": "retain global sigma-cell relative positions"
+  },
+  "cells": [
+    {
+      "grain_id": 1,
+      "cell_name": "Z12_01_grain_01",
+      "site_class": "Z12",
+      "wyckoff_label": "8i-Z12",
+      "coordination_number": 12,
+      "atom_count": 2609,
+      "center_reduced": [
+        0.071,
+        0.257,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.071,
+        0.257,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        8.529446090214796,
+        30.874192185707084,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.1666666666666664,
+          0.9831632475943929,
+          0.07491495713052965
+        ],
+        [
+          -0.6498299142610594,
+          0.1666666666666664,
+          -0.7415816237971965
+        ],
+        [
+          -0.7415816237971965,
+          0.07491495713052965,
+          0.6666666666666665
+        ]
+      ],
+      "twin_partner_grain_id": 3,
+      "twin_pair_group": "Z12-Z12",
+      "twin_face_normal_outward": [
+        0.7071067811865476,
+        -0.7071067811865476,
+        0.0
+      ],
+      "shared_anchor_reduced": [
+        0.16399999999999998,
+        0.164,
+        0.5
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 2,
+      "cell_name": "Z12_02_grain_02",
+      "site_class": "Z12",
+      "wyckoff_label": "8i-Z12",
+      "coordination_number": 12,
+      "atom_count": 2609,
+      "center_reduced": [
+        0.243,
+        0.571,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.243,
+        0.571,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        29.19232957636895,
+        68.59596785229083,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.908248290463863,
+          -0.09175170953613694,
+          0.4082482904638631
+        ],
+        [
+          -0.09175170953613694,
+          0.908248290463863,
+          0.4082482904638631
+        ],
+        [
+          -0.4082482904638631,
+          -0.4082482904638631,
+          0.8164965809277261
+        ]
+      ],
+      "twin_partner_grain_id": 4,
+      "twin_pair_group": "Z12-Z12",
+      "twin_face_normal_outward": [
+        0.7071067811865476,
+        0.7071067811865476,
+        0.0
+      ],
+      "shared_anchor_reduced": [
+        0.33599999999999997,
+        0.6639999999999999,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 3,
+      "cell_name": "Z12_03_grain_03",
+      "site_class": "Z12",
+      "wyckoff_label": "8i-Z12",
+      "coordination_number": 12,
+      "atom_count": 2522,
+      "center_reduced": [
+        0.257,
+        0.071,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.257,
+        0.07100000000000001,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        30.874192185707084,
+        8.529446090214797,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.7415816237971963,
+          0.6498299142610596,
+          -0.1666666666666666
+        ],
+        [
+          -0.07491495713052959,
+          -0.16666666666666688,
+          -0.9831632475943928
+        ],
+        [
+          -0.666666666666667,
+          0.7415816237971963,
+          -0.07491495713052987
+        ]
+      ],
+      "twin_partner_grain_id": 1,
+      "twin_pair_group": "Z12-Z12",
+      "twin_face_normal_outward": [
+        -0.7071067811865476,
+        0.7071067811865476,
+        -0.0
+      ],
+      "shared_anchor_reduced": [
+        0.16399999999999998,
+        0.164,
+        0.5
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 4,
+      "cell_name": "Z12_04_grain_04",
+      "site_class": "Z12",
+      "wyckoff_label": "8i-Z12",
+      "coordination_number": 12,
+      "atom_count": 2518,
+      "center_reduced": [
+        0.429,
+        0.757,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.429,
+        0.7569999999999999,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        51.53707567186124,
+        90.94071394778311,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.9082482904638631,
+          0.40824829046386313,
+          -0.09175170953613704
+        ],
+        [
+          -0.09175170953613701,
+          0.40824829046386296,
+          0.9082482904638631
+        ],
+        [
+          0.408248290463863,
+          -0.8164965809277261,
+          0.4082482904638631
+        ]
+      ],
+      "twin_partner_grain_id": 2,
+      "twin_pair_group": "Z12-Z12",
+      "twin_face_normal_outward": [
+        -0.7071067811865476,
+        -0.7071067811865476,
+        -0.0
+      ],
+      "shared_anchor_reduced": [
+        0.33599999999999997,
+        0.6639999999999999,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 5,
+      "cell_name": "Z12_05_grain_05",
+      "site_class": "Z12",
+      "wyckoff_label": "8i-Z12",
+      "coordination_number": 12,
+      "atom_count": 2609,
+      "center_reduced": [
+        0.571,
+        0.243,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.571,
+        0.243,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        68.59596785229083,
+        29.19232957636895,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.908248290463863,
+          -0.09175170953613694,
+          0.4082482904638631
+        ],
+        [
+          -0.09175170953613694,
+          0.908248290463863,
+          0.4082482904638631
+        ],
+        [
+          -0.4082482904638631,
+          -0.4082482904638631,
+          0.8164965809277261
+        ]
+      ],
+      "twin_partner_grain_id": 7,
+      "twin_pair_group": "Z12-Z12",
+      "twin_face_normal_outward": [
+        0.7071067811865476,
+        0.7071067811865476,
+        0.0
+      ],
+      "shared_anchor_reduced": [
+        0.6639999999999999,
+        0.33599999999999997,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 6,
+      "cell_name": "Z12_06_grain_06",
+      "site_class": "Z12",
+      "wyckoff_label": "8i-Z12",
+      "coordination_number": 12,
+      "atom_count": 2508,
+      "center_reduced": [
+        0.743,
+        0.929,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.743,
+        0.929,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        89.25885133844498,
+        111.60359743393728,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.7240669100217673,
+          0.35273476429853934,
+          0.5927101280278448
+        ],
+        [
+          -0.45278843994726137,
+          0.8913293269663947,
+          0.02268610896031706
+        ],
+        [
+          -0.5202977402042561,
+          -0.28479855502598317,
+          0.8050962952302393
+        ]
+      ],
+      "twin_partner_grain_id": 9,
+      "twin_pair_group": "Z12-Z12",
+      "twin_face_normal_outward": [
+        0.9638930885009624,
+        0.266289530286258,
+        0.0
+      ],
+      "shared_anchor_reduced": [
+        0.8714999999999999,
+        0.9645,
+        0.5
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 7,
+      "cell_name": "Z12_07_grain_07",
+      "site_class": "Z12",
+      "wyckoff_label": "8i-Z12",
+      "coordination_number": 12,
+      "atom_count": 2518,
+      "center_reduced": [
+        0.757,
+        0.429,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.7569999999999999,
+        0.429,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        90.94071394778311,
+        51.53707567186124,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.40824829046386296,
+          -0.09175170953613701,
+          0.9082482904638631
+        ],
+        [
+          0.40824829046386313,
+          0.9082482904638631,
+          -0.09175170953613704
+        ],
+        [
+          -0.8164965809277261,
+          0.408248290463863,
+          0.4082482904638631
+        ]
+      ],
+      "twin_partner_grain_id": 5,
+      "twin_pair_group": "Z12-Z12",
+      "twin_face_normal_outward": [
+        -0.7071067811865476,
+        -0.7071067811865476,
+        -0.0
+      ],
+      "shared_anchor_reduced": [
+        0.6639999999999999,
+        0.33599999999999997,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 8,
+      "cell_name": "Z12_08_grain_08",
+      "site_class": "Z12",
+      "wyckoff_label": "8i-Z12",
+      "coordination_number": 12,
+      "atom_count": 2561,
+      "center_reduced": [
+        0.929,
+        0.743,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.929,
+        0.743,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        111.60359743393728,
+        89.25885133844498,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          -0.724224545639023,
+          -0.09138843724546325,
+          -0.6834815001386527
+        ],
+        [
+          0.6581588042661062,
+          -0.387330061421858,
+          -0.6456023636000331
+        ],
+        [
+          -0.20573234033802343,
+          -0.9174004453109733,
+          0.34066204232680175
+        ]
+      ],
+      "twin_partner_grain_id": 23,
+      "twin_pair_group": "Z12-Z14",
+      "twin_face_normal_outward": [
+        -0.865502603314092,
+        -0.216375650828523,
+        -0.4517596942900758
+      ],
+      "shared_anchor_reduced": [
+        0.805,
+        0.712,
+        0.375
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 9,
+      "cell_name": "Z12_09_grain_09",
+      "site_class": "Z12",
+      "wyckoff_label": "2b-Z12",
+      "coordination_number": 12,
+      "atom_count": 2564,
+      "center_reduced": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        1.0,
+        1.0,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        120.13304352415207,
+        120.13304352415207,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.7602731039335616,
+          0.520297740204256,
+          0.38894095821033375
+        ],
+        [
+          -0.5838446629800946,
+          0.2847985550259833,
+          0.7602731039335616
+        ],
+        [
+          0.28479855502598317,
+          -0.8050962952302394,
+          0.520297740204256
+        ]
+      ],
+      "twin_partner_grain_id": 6,
+      "twin_pair_group": "Z12-Z12",
+      "twin_face_normal_outward": [
+        -0.9638930885009624,
+        -0.266289530286258,
+        -0.0
+      ],
+      "shared_anchor_reduced": [
+        0.8714999999999999,
+        0.9645,
+        0.5
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 10,
+      "cell_name": "Z12_10_grain_10",
+      "site_class": "Z12",
+      "wyckoff_label": "2b-Z12",
+      "coordination_number": 12,
+      "atom_count": 2528,
+      "center_reduced": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.5,
+        0.5,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        60.066521762076036,
+        60.066521762076036,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.7340394074907401,
+          -0.2659605925092599,
+          0.6248608737013119
+        ],
+        [
+          -0.2659605925092599,
+          0.7340394074907401,
+          0.6248608737013119
+        ],
+        [
+          -0.6248608737013119,
+          -0.6248608737013119,
+          0.4680788149814802
+        ]
+      ],
+      "twin_partner_grain_id": 24,
+      "twin_pair_group": "Z12-Z14",
+      "twin_face_normal_outward": [
+        0.6310090234690356,
+        0.6310090234690356,
+        -0.4512817574435158
+      ],
+      "shared_anchor_reduced": [
+        0.5905,
+        0.5905,
+        -0.125
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 11,
+      "cell_name": "Z14_01_grain_11",
+      "site_class": "Z14",
+      "wyckoff_label": "8i-Z14",
+      "coordination_number": 14,
+      "atom_count": 2528,
+      "center_reduced": [
+        0.031,
+        0.371,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.031,
+        0.371,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        3.724124349248714,
+        44.56935914746042,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.6473858649288062,
+          -0.6431818006537183,
+          -0.4089116202778079
+        ],
+        [
+          0.7493603275276842,
+          0.4392239117675427,
+          0.49552139697415676
+        ],
+        [
+          -0.13910658294266118,
+          -0.627215693872099,
+          0.7663222768147602
+        ]
+      ],
+      "twin_partner_grain_id": 18,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        -0.23365801640124598,
+        0.9723188424438945,
+        0.0
+      ],
+      "shared_anchor_reduced": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 12,
+      "cell_name": "Z14_02_grain_12",
+      "site_class": "Z14",
+      "wyckoff_label": "8i-Z14",
+      "coordination_number": 14,
+      "atom_count": 2522,
+      "center_reduced": [
+        0.129,
+        0.531,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.129,
+        0.531,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        15.497162614615618,
+        63.790646111324754,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          -0.6363535277902101,
+          -0.6758002907156632,
+          -0.37195181776351044
+        ],
+        [
+          0.17713176279544582,
+          0.34128119561426673,
+          -0.9231205144124329
+        ],
+        [
+          0.7507852730827453,
+          -0.6533154770772861,
+          -0.09746979600545957
+        ]
+      ],
+      "twin_partner_grain_id": 17,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        -0.9723188424438945,
+        -0.23365801640124598,
+        0.0
+      ],
+      "shared_anchor_reduced": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 13,
+      "cell_name": "Z14_03_grain_13",
+      "site_class": "Z14",
+      "wyckoff_label": "8i-Z14",
+      "coordination_number": 14,
+      "atom_count": 2526,
+      "center_reduced": [
+        0.371,
+        0.031,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.371,
+        0.031,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        44.56935914746042,
+        3.724124349248714,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.7776173326748641,
+          0.303757753388982,
+          -0.5504929710538621
+        ],
+        [
+          -0.6279945300979288,
+          0.41780269472751086,
+          -0.6565544748499641
+        ],
+        [
+          0.030563934476949384,
+          0.8562547141677581,
+          0.5156488246614936
+        ]
+      ],
+      "twin_partner_grain_id": 14,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        0.3065049320089721,
+        -0.5004162155248525,
+        0.8097149732430294
+      ],
+      "shared_anchor_reduced": [
+        0.42,
+        -0.049,
+        0.25
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 14,
+      "cell_name": "Z14_04_grain_14",
+      "site_class": "Z14",
+      "wyckoff_label": "8i-Z14",
+      "coordination_number": 14,
+      "atom_count": 2475,
+      "center_reduced": [
+        0.469,
+        0.871,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.469,
+        -0.129,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        56.34239741282732,
+        -15.497162614615618,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.9044143810605181,
+          -0.4236959226682082,
+          0.050163656617674135
+        ],
+        [
+          0.07872360136970931,
+          0.050163656617674246,
+          -0.9956335682077655
+        ],
+        [
+          0.4193294908759737,
+          0.9044143810605182,
+          0.0787236013697093
+        ]
+      ],
+      "twin_partner_grain_id": 13,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        -0.3065049320089721,
+        0.5004162155248525,
+        -0.8097149732430294
+      ],
+      "shared_anchor_reduced": [
+        0.42,
+        -0.049,
+        0.25
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 15,
+      "cell_name": "Z14_05_grain_15",
+      "site_class": "Z14",
+      "wyckoff_label": "8i-Z14",
+      "coordination_number": 14,
+      "atom_count": 2539,
+      "center_reduced": [
+        0.531,
+        0.129,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.531,
+        0.129,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        63.790646111324754,
+        15.497162614615618,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          -0.5036191112030384,
+          0.19223415405178979,
+          0.8422670721612325
+        ],
+        [
+          -0.7395181294351212,
+          0.4080952646364041,
+          -0.5353234454216655
+        ],
+        [
+          -0.44663265338289093,
+          -0.892470887478878,
+          -0.06336393244443239
+        ]
+      ],
+      "twin_partner_grain_id": 16,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        0.3065049320089721,
+        -0.5004162155248525,
+        -0.8097149732430294
+      ],
+      "shared_anchor_reduced": [
+        0.5800000000000001,
+        0.049,
+        0.25
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 16,
+      "cell_name": "Z14_06_grain_16",
+      "site_class": "Z14",
+      "wyckoff_label": "8i-Z14",
+      "coordination_number": 14,
+      "atom_count": 2463,
+      "center_reduced": [
+        0.629,
+        0.969,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.629,
+        -0.031,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        75.56368437669165,
+        -3.724124349248714,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.16168725595486627,
+          -0.4883456621545763,
+          0.8575405212096944
+        ],
+        [
+          -0.9859261381166592,
+          -0.042507428058589425,
+          0.1616872559548662
+        ],
+        [
+          -0.042507428058589314,
+          -0.8716143830930352,
+          -0.48834566215457664
+        ]
+      ],
+      "twin_partner_grain_id": 15,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        -0.3065049320089721,
+        0.5004162155248525,
+        0.8097149732430294
+      ],
+      "shared_anchor_reduced": [
+        0.5800000000000001,
+        0.049,
+        0.25
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 17,
+      "cell_name": "Z14_07_grain_17",
+      "site_class": "Z14",
+      "wyckoff_label": "8i-Z14",
+      "coordination_number": 14,
+      "atom_count": 2429,
+      "center_reduced": [
+        0.871,
+        0.469,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        -0.129,
+        0.46900000000000003,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        -15.497162614615618,
+        56.342397412827324,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          -0.4469368001305928,
+          -0.7507852730827453,
+          -0.48638356305604574
+        ],
+        [
+          -0.6110862329494136,
+          0.6533154770772861,
+          -0.44693680013059245
+        ],
+        [
+          0.6533154770772862,
+          0.09746979600545902,
+          -0.7507852730827455
+        ]
+      ],
+      "twin_partner_grain_id": 12,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        0.9723188424438945,
+        0.23365801640124598,
+        -0.0
+      ],
+      "shared_anchor_reduced": [
+        0.0,
+        0.5,
+        0.5
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 18,
+      "cell_name": "Z14_08_grain_18",
+      "site_class": "Z14",
+      "wyckoff_label": "8i-Z14",
+      "coordination_number": 14,
+      "atom_count": 2429,
+      "center_reduced": [
+        0.969,
+        0.629,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        -0.031,
+        0.629,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        -3.724124349248714,
+        75.56368437669165,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.13910658294266143,
+          -0.917190902263953,
+          0.37337676331857145
+        ],
+        [
+          0.6272156938720991,
+          0.3733767633185716,
+          0.683513179078713
+        ],
+        [
+          -0.7663222768147602,
+          0.13910658294266115,
+          0.627215693872099
+        ]
+      ],
+      "twin_partner_grain_id": 11,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        0.23365801640124598,
+        -0.9723188424438945,
+        -0.0
+      ],
+      "shared_anchor_reduced": [
+        0.0,
+        0.5,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 19,
+      "cell_name": "Z14_09_grain_19",
+      "site_class": "Z14",
+      "wyckoff_label": "8j-Z14",
+      "coordination_number": 14,
+      "atom_count": 2502,
+      "center_reduced": [
+        0.181,
+        0.819,
+        0.25
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.181,
+        0.819,
+        0.25
+      ],
+      "center_cartesian_unwrapped": [
+        21.744080877871525,
+        98.38896264628055,
+        15.550818875161978
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.2113248654051869,
+          -0.7886751345948131,
+          0.5773502691896258
+        ],
+        [
+          -0.7886751345948131,
+          0.2113248654051869,
+          0.5773502691896258
+        ],
+        [
+          -0.5773502691896258,
+          -0.5773502691896258,
+          -0.5773502691896262
+        ]
+      ],
+      "twin_partner_grain_id": 20,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "shared_anchor_reduced": [
+        0.181,
+        0.819,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 20,
+      "cell_name": "Z14_10_grain_20",
+      "site_class": "Z14",
+      "wyckoff_label": "8j-Z14",
+      "coordination_number": 14,
+      "atom_count": 2402,
+      "center_reduced": [
+        0.181,
+        0.819,
+        0.75
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.181,
+        0.819,
+        -0.25
+      ],
+      "center_cartesian_unwrapped": [
+        21.744080877871525,
+        98.38896264628055,
+        -15.550818875161978
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          -0.577350269189626,
+          -0.21132486540518752,
+          0.788675134594813
+        ],
+        [
+          -0.5773502691896257,
+          0.7886751345948129,
+          -0.21132486540518702
+        ],
+        [
+          -0.5773502691896258,
+          -0.5773502691896258,
+          -0.5773502691896262
+        ]
+      ],
+      "twin_partner_grain_id": 19,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "shared_anchor_reduced": [
+        0.181,
+        0.819,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 21,
+      "cell_name": "Z14_11_grain_21",
+      "site_class": "Z14",
+      "wyckoff_label": "8j-Z14",
+      "coordination_number": 14,
+      "atom_count": 2514,
+      "center_reduced": [
+        0.319,
+        0.319,
+        0.25
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.319,
+        0.319,
+        0.25
+      ],
+      "center_cartesian_unwrapped": [
+        38.32244088420451,
+        38.32244088420451,
+        15.550818875161978
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.2113248654051869,
+          -0.7886751345948131,
+          0.5773502691896258
+        ],
+        [
+          -0.7886751345948131,
+          0.2113248654051869,
+          0.5773502691896258
+        ],
+        [
+          -0.5773502691896258,
+          -0.5773502691896258,
+          -0.5773502691896262
+        ]
+      ],
+      "twin_partner_grain_id": 22,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "shared_anchor_reduced": [
+        0.319,
+        0.319,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 22,
+      "cell_name": "Z14_12_grain_22",
+      "site_class": "Z14",
+      "wyckoff_label": "8j-Z14",
+      "coordination_number": 14,
+      "atom_count": 2406,
+      "center_reduced": [
+        0.319,
+        0.319,
+        0.75
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.319,
+        0.319,
+        -0.25
+      ],
+      "center_cartesian_unwrapped": [
+        38.32244088420451,
+        38.32244088420451,
+        -15.550818875161978
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.7886751345948129,
+          -0.5773502691896257,
+          -0.21132486540518702
+        ],
+        [
+          -0.21132486540518752,
+          -0.577350269189626,
+          0.788675134594813
+        ],
+        [
+          -0.5773502691896258,
+          -0.5773502691896258,
+          -0.5773502691896262
+        ]
+      ],
+      "twin_partner_grain_id": 21,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "shared_anchor_reduced": [
+        0.319,
+        0.319,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 23,
+      "cell_name": "Z14_13_grain_23",
+      "site_class": "Z14",
+      "wyckoff_label": "8j-Z14",
+      "coordination_number": 14,
+      "atom_count": 2486,
+      "center_reduced": [
+        0.681,
+        0.681,
+        0.25
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.681,
+        0.681,
+        0.25
+      ],
+      "center_cartesian_unwrapped": [
+        81.81060263994756,
+        81.81060263994756,
+        15.550818875161978
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          -0.3159148218767734,
+          -0.27517177637640305,
+          -0.9080078847699626
+        ],
+        [
+          0.3957532830961768,
+          -0.9080078847699627,
+          0.1374809809180012
+        ],
+        [
+          -0.8623092045415985,
+          -0.3159148218767731,
+          0.39575328309617663
+        ]
+      ],
+      "twin_partner_grain_id": 8,
+      "twin_pair_group": "Z12-Z14",
+      "twin_face_normal_outward": [
+        0.865502603314092,
+        0.216375650828523,
+        0.4517596942900758
+      ],
+      "shared_anchor_reduced": [
+        0.805,
+        0.712,
+        0.375
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 24,
+      "cell_name": "Z14_14_grain_24",
+      "site_class": "Z14",
+      "wyckoff_label": "8j-Z14",
+      "coordination_number": 14,
+      "atom_count": 2459,
+      "center_reduced": [
+        0.681,
+        0.681,
+        0.75
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.681,
+        0.681,
+        -0.25
+      ],
+      "center_cartesian_unwrapped": [
+        81.81060263994756,
+        81.81060263994756,
+        -15.550818875161978
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.9945870516311215,
+          0.10376558542054948,
+          -0.005412948368878956
+        ],
+        [
+          -0.005412948368878734,
+          0.10376558542054953,
+          0.9945870516311215
+        ],
+        [
+          0.10376558542054931,
+          -0.9891741032622425,
+          0.10376558542054948
+        ]
+      ],
+      "twin_partner_grain_id": 10,
+      "twin_pair_group": "Z12-Z14",
+      "twin_face_normal_outward": [
+        -0.6310090234690356,
+        -0.6310090234690356,
+        0.4512817574435158
+      ],
+      "shared_anchor_reduced": [
+        0.5905,
+        0.5905,
+        -0.125
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 25,
+      "cell_name": "Z14_15_grain_25",
+      "site_class": "Z14",
+      "wyckoff_label": "8j-Z14",
+      "coordination_number": 14,
+      "atom_count": 2495,
+      "center_reduced": [
+        0.819,
+        0.181,
+        0.25
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.819,
+        0.181,
+        0.25
+      ],
+      "center_cartesian_unwrapped": [
+        98.38896264628055,
+        21.744080877871525,
+        15.550818875161978
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.2113248654051869,
+          -0.7886751345948131,
+          0.5773502691896258
+        ],
+        [
+          -0.7886751345948131,
+          0.2113248654051869,
+          0.5773502691896258
+        ],
+        [
+          -0.5773502691896258,
+          -0.5773502691896258,
+          -0.5773502691896262
+        ]
+      ],
+      "twin_partner_grain_id": 26,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "shared_anchor_reduced": [
+        0.819,
+        0.181,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 26,
+      "cell_name": "Z14_16_grain_26",
+      "site_class": "Z14",
+      "wyckoff_label": "8j-Z14",
+      "coordination_number": 14,
+      "atom_count": 2399,
+      "center_reduced": [
+        0.819,
+        0.181,
+        0.75
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.819,
+        0.181,
+        -0.25
+      ],
+      "center_cartesian_unwrapped": [
+        98.38896264628055,
+        21.744080877871525,
+        -15.550818875161978
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          -0.577350269189626,
+          -0.21132486540518752,
+          0.788675134594813
+        ],
+        [
+          -0.5773502691896257,
+          0.7886751345948129,
+          -0.21132486540518702
+        ],
+        [
+          -0.5773502691896258,
+          -0.5773502691896258,
+          -0.5773502691896262
+        ]
+      ],
+      "twin_partner_grain_id": 25,
+      "twin_pair_group": "Z14-Z14",
+      "twin_face_normal_outward": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "shared_anchor_reduced": [
+        0.819,
+        0.181,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 27,
+      "cell_name": "Z15_01_grain_27",
+      "site_class": "Z15",
+      "wyckoff_label": "4f-Z15",
+      "coordination_number": 15,
+      "atom_count": 2517,
+      "center_reduced": [
+        0.104,
+        0.104,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.104,
+        0.104,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        12.493836526511815,
+        12.493836526511815,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.09175170953613665,
+          -0.9082482904638634,
+          -0.4082482904638631
+        ],
+        [
+          -0.9082482904638634,
+          0.09175170953613665,
+          -0.4082482904638631
+        ],
+        [
+          0.4082482904638631,
+          0.4082482904638631,
+          -0.8164965809277267
+        ]
+      ],
+      "twin_partner_grain_id": 30,
+      "twin_pair_group": "Z15-Z15",
+      "twin_face_normal_outward": [
+        -0.7071067811865476,
+        -0.7071067811865476,
+        0.0
+      ],
+      "shared_anchor_reduced": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 28,
+      "cell_name": "Z15_02_grain_28",
+      "site_class": "Z15",
+      "wyckoff_label": "4f-Z15",
+      "coordination_number": 15,
+      "atom_count": 2527,
+      "center_reduced": [
+        0.396,
+        0.604,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.396,
+        0.604,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        47.57268523556422,
+        72.56035828858785,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.1666666666666664,
+          0.9831632475943929,
+          0.07491495713052965
+        ],
+        [
+          -0.6498299142610594,
+          0.1666666666666664,
+          -0.7415816237971965
+        ],
+        [
+          -0.7415816237971965,
+          0.07491495713052965,
+          0.6666666666666665
+        ]
+      ],
+      "twin_partner_grain_id": 29,
+      "twin_pair_group": "Z15-Z15",
+      "twin_face_normal_outward": [
+        0.7071067811865476,
+        -0.7071067811865476,
+        0.0
+      ],
+      "shared_anchor_reduced": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 29,
+      "cell_name": "Z15_03_grain_29",
+      "site_class": "Z15",
+      "wyckoff_label": "4f-Z15",
+      "coordination_number": 15,
+      "atom_count": 2450,
+      "center_reduced": [
+        0.604,
+        0.396,
+        0.5
+      ],
+      "construction_center_reduced_unwrapped": [
+        0.604,
+        0.396,
+        0.5
+      ],
+      "center_cartesian_unwrapped": [
+        72.56035828858785,
+        47.57268523556422,
+        31.101637750323956
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.7415816237971963,
+          0.6498299142610596,
+          -0.1666666666666666
+        ],
+        [
+          -0.07491495713052959,
+          -0.16666666666666688,
+          -0.9831632475943928
+        ],
+        [
+          -0.666666666666667,
+          0.7415816237971963,
+          -0.07491495713052987
+        ]
+      ],
+      "twin_partner_grain_id": 28,
+      "twin_pair_group": "Z15-Z15",
+      "twin_face_normal_outward": [
+        -0.7071067811865476,
+        0.7071067811865476,
+        -0.0
+      ],
+      "shared_anchor_reduced": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    },
+    {
+      "grain_id": 30,
+      "cell_name": "Z15_04_grain_30",
+      "site_class": "Z15",
+      "wyckoff_label": "4f-Z15",
+      "coordination_number": 15,
+      "atom_count": 2442,
+      "center_reduced": [
+        0.896,
+        0.896,
+        0.0
+      ],
+      "construction_center_reduced_unwrapped": [
+        -0.104,
+        -0.104,
+        0.0
+      ],
+      "center_cartesian_unwrapped": [
+        -12.493836526511815,
+        -12.493836526511815,
+        0.0
+      ],
+      "orientation_matrix_crystal_to_lab": [
+        [
+          0.0917517095361367,
+          -0.4082482904638633,
+          -0.9082482904638636
+        ],
+        [
+          -0.9082482904638634,
+          -0.4082482904638634,
+          0.09175170953613737
+        ],
+        [
+          -0.408248290463863,
+          0.8164965809277261,
+          -0.40824829046386335
+        ]
+      ],
+      "twin_partner_grain_id": 27,
+      "twin_pair_group": "Z15-Z15",
+      "twin_face_normal_outward": [
+        0.7071067811865476,
+        0.7071067811865476,
+        -0.0
+      ],
+      "shared_anchor_reduced": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "sigma": 3,
+      "misorientation_degrees": 60.0
+    }
+  ]
+}

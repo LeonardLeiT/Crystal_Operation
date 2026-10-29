@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "fixed_size": 13.9,
+  "config": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\ZFoam\\twin_combinations.json",
+  "rules": {
+    "fixed_geometry": "hP7 Z phase, P6/mmm, equal-volume Laguerre cells",
+    "positive_boundary": "Sigma3: FCC 60 degrees about <111>",
+    "negative_control": "Sigma5: FCC 36.869897645844 degrees about <100>",
+    "phase_registration": "each selected pair shares its true-face midpoint lattice anchor",
+    "unpaired_cell": "grain 3 (Z12/3f) always has an independent seeded orientation"
+  },
+  "combinations": [
+    {
+      "id": "01_all_sigma3",
+      "sigma3_classes": [
+        "Z12",
+        "Z14",
+        "Z15"
+      ],
+      "pair_types": {
+        "Z12": "sigma3",
+        "Z14": "sigma3",
+        "Z15": "sigma3"
+      },
+      "output": "01_all_sigma3.data",
+      "number_of_atoms": 74509,
+      "box_vectors": [
+        [
+          100.97056463676734,
+          0.0,
+          0.0
+        ],
+        [
+          -50.48528231838367,
+          87.44307400989919,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          100.1714234110392
+        ]
+      ],
+      "sigma3_pair_count": 3,
+      "sigma5_pair_count": 0,
+      "overlap_atoms_removed": 1838,
+      "grain_counts": {
+        "1": 10919,
+        "2": 10418,
+        "3": 10733,
+        "4": 10750,
+        "5": 10551,
+        "6": 10855,
+        "7": 10283
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "site_class": "Z12",
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "periodic_face_vector_reduced": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "face_normal": [
+            0.5000000000000001,
+            0.8660254037844387,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.75,
+            0.25,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "site_class": "Z15",
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "periodic_face_vector_reduced": [
+            -0.6666666666666666,
+            -0.3333333333333333,
+            0.0
+          ],
+          "face_normal": [
+            -0.8660254037844387,
+            -0.5,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "site_class": "Z14",
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "periodic_face_vector_reduced": [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 59.99999999999997
+        }
+      ],
+      "cna": {
+        "other": 14709,
+        "fcc": 59016,
+        "hcp": 784,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "02_z12_only_sigma3",
+      "sigma3_classes": [
+        "Z12"
+      ],
+      "pair_types": {
+        "Z12": "sigma3",
+        "Z14": "sigma5",
+        "Z15": "sigma5"
+      },
+      "output": "02_z12_only_sigma3.data",
+      "number_of_atoms": 74420,
+      "box_vectors": [
+        [
+          100.97056463676734,
+          0.0,
+          0.0
+        ],
+        [
+          -50.48528231838367,
+          87.44307400989919,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          100.1714234110392
+        ]
+      ],
+      "sigma3_pair_count": 1,
+      "sigma5_pair_count": 2,
+      "overlap_atoms_removed": 1339,
+      "grain_counts": {
+        "1": 10919,
+        "2": 10418,
+        "3": 10733,
+        "4": 10760,
+        "5": 10574,
+        "6": 10582,
+        "7": 10434
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "site_class": "Z12",
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "periodic_face_vector_reduced": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "face_normal": [
+            0.5000000000000001,
+            0.8660254037844387,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.75,
+            0.25,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "site_class": "Z15",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            -0.6666666666666666,
+            -0.3333333333333333,
+            0.0
+          ],
+          "face_normal": [
+            -0.8660254037844387,
+            -0.5,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "site_class": "Z14",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.86989764584401
+        }
+      ],
+      "cna": {
+        "other": 15866,
+        "fcc": 58351,
+        "hcp": 203,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "03_z14_only_sigma3",
+      "sigma3_classes": [
+        "Z14"
+      ],
+      "pair_types": {
+        "Z12": "sigma5",
+        "Z14": "sigma3",
+        "Z15": "sigma5"
+      },
+      "output": "03_z14_only_sigma3.data",
+      "number_of_atoms": 74491,
+      "box_vectors": [
+        [
+          100.97056463676734,
+          0.0,
+          0.0
+        ],
+        [
+          -50.48528231838367,
+          87.44307400989919,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          100.1714234110392
+        ]
+      ],
+      "sigma3_pair_count": 1,
+      "sigma5_pair_count": 2,
+      "overlap_atoms_removed": 1465,
+      "grain_counts": {
+        "1": 10730,
+        "2": 10530,
+        "3": 10721,
+        "4": 10773,
+        "5": 10571,
+        "6": 10870,
+        "7": 10296
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "site_class": "Z12",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "face_normal": [
+            0.5000000000000001,
+            0.8660254037844387,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.75,
+            0.25,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "site_class": "Z15",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            -0.6666666666666666,
+            -0.3333333333333333,
+            0.0
+          ],
+          "face_normal": [
+            -0.8660254037844387,
+            -0.5,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "site_class": "Z14",
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "periodic_face_vector_reduced": [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 59.99999999999997
+        }
+      ],
+      "cna": {
+        "other": 15450,
+        "fcc": 58593,
+        "hcp": 448,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "04_z15_only_sigma3",
+      "sigma3_classes": [
+        "Z15"
+      ],
+      "pair_types": {
+        "Z12": "sigma5",
+        "Z14": "sigma5",
+        "Z15": "sigma3"
+      },
+      "output": "04_z15_only_sigma3.data",
+      "number_of_atoms": 74297,
+      "box_vectors": [
+        [
+          100.97056463676734,
+          0.0,
+          0.0
+        ],
+        [
+          -50.48528231838367,
+          87.44307400989919,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          100.1714234110392
+        ]
+      ],
+      "sigma3_pair_count": 1,
+      "sigma5_pair_count": 2,
+      "overlap_atoms_removed": 1119,
+      "grain_counts": {
+        "1": 10730,
+        "2": 10530,
+        "3": 10721,
+        "4": 10760,
+        "5": 10558,
+        "6": 10565,
+        "7": 10433
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "site_class": "Z12",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "face_normal": [
+            0.5000000000000001,
+            0.8660254037844387,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.75,
+            0.25,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "site_class": "Z15",
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "periodic_face_vector_reduced": [
+            -0.6666666666666666,
+            -0.3333333333333333,
+            0.0
+          ],
+          "face_normal": [
+            -0.8660254037844387,
+            -0.5,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "site_class": "Z14",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.86989764584401
+        }
+      ],
+      "cna": {
+        "other": 15868,
+        "fcc": 58283,
+        "hcp": 145,
+        "bcc": 1,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "05_z14_z15_sigma3",
+      "sigma3_classes": [
+        "Z14",
+        "Z15"
+      ],
+      "pair_types": {
+        "Z12": "sigma5",
+        "Z14": "sigma3",
+        "Z15": "sigma3"
+      },
+      "output": "05_z14_z15_sigma3.data",
+      "number_of_atoms": 74439,
+      "box_vectors": [
+        [
+          100.97056463676734,
+          0.0,
+          0.0
+        ],
+        [
+          -50.48528231838367,
+          87.44307400989919,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          100.1714234110392
+        ]
+      ],
+      "sigma3_pair_count": 2,
+      "sigma5_pair_count": 1,
+      "overlap_atoms_removed": 1541,
+      "grain_counts": {
+        "1": 10730,
+        "2": 10530,
+        "3": 10721,
+        "4": 10760,
+        "5": 10558,
+        "6": 10855,
+        "7": 10285
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "site_class": "Z12",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "face_normal": [
+            0.5000000000000001,
+            0.8660254037844387,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.75,
+            0.25,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "site_class": "Z15",
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "periodic_face_vector_reduced": [
+            -0.6666666666666666,
+            -0.3333333333333333,
+            0.0
+          ],
+          "face_normal": [
+            -0.8660254037844387,
+            -0.5,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "site_class": "Z14",
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "periodic_face_vector_reduced": [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 59.99999999999997
+        }
+      ],
+      "cna": {
+        "other": 15114,
+        "fcc": 58731,
+        "hcp": 594,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "06_all_sigma5_control",
+      "sigma3_classes": [],
+      "pair_types": {
+        "Z12": "sigma5",
+        "Z14": "sigma5",
+        "Z15": "sigma5"
+      },
+      "output": "06_all_sigma5_control.data",
+      "number_of_atoms": 74352,
+      "box_vectors": [
+        [
+          100.97056463676734,
+          0.0,
+          0.0
+        ],
+        [
+          -50.48528231838367,
+          87.44307400989919,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          100.1714234110392
+        ]
+      ],
+      "sigma3_pair_count": 0,
+      "sigma5_pair_count": 3,
+      "overlap_atoms_removed": 1040,
+      "grain_counts": {
+        "1": 10730,
+        "2": 10530,
+        "3": 10721,
+        "4": 10773,
+        "5": 10571,
+        "6": 10585,
+        "7": 10442
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "site_class": "Z12",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            0.5,
+            0.5,
+            0.0
+          ],
+          "face_normal": [
+            0.5000000000000001,
+            0.8660254037844387,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.75,
+            0.25,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            4,
+            5
+          ],
+          "site_class": "Z15",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            -0.6666666666666666,
+            -0.3333333333333333,
+            0.0
+          ],
+          "face_normal": [
+            -0.8660254037844387,
+            -0.5,
+            0.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            6,
+            7
+          ],
+          "site_class": "Z14",
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "periodic_face_vector_reduced": [
+            0.0,
+            0.0,
+            -0.5
+          ],
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced_unwrapped": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "coherent_phase_anchor": true,
+          "measured_disorientation": 36.86989764584401
+        }
+      ],
+      "cna": {
+        "other": 16185,
+        "fcc": 58160,
+        "hcp": 6,
+        "bcc": 1,
+        "icosahedral": 0
+      }
+    }
+  ]
+}

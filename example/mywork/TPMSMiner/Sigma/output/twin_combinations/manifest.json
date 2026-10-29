@@ -1,0 +1,3111 @@
+{
+  "schema_version": 1,
+  "fixed_size": 8.6,
+  "size_series_enabled": false,
+  "config": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\Sigma\\twin_combinations.json",
+  "rules": {
+    "sigma3": "60 degrees about <111>; positive twin-anchor candidate",
+    "sigma5": "36.86989764584402 degrees about <100>; negative control",
+    "shared_phase": "Both grains share an FCC lattice-site anchor at the true sigma-foam face center.",
+    "fixed_geometry": "All candidates use size=8.6, c/a=131/253, equal-volume Laguerre cells, and the same overlap cutoff."
+  },
+  "combinations": [
+    {
+      "id": "sigma_s3_all_reference",
+      "sigma3_groups": [
+        "Z12-Z12",
+        "Z12-Z14",
+        "Z14-Z14",
+        "Z15-Z15"
+      ],
+      "role": "positive_reference",
+      "hypothesis": "Maximum Sigma3 coverage across all sigma-foam cell classes.",
+      "pair_types": {
+        "Z12-Z12": "sigma3",
+        "Z15-Z15": "sigma3",
+        "Z12-Z14": "sigma3",
+        "Z14-Z14": "sigma3"
+      },
+      "output": "sigma_s3_all_reference.data",
+      "number_of_atoms": 75056,
+      "box_lengths": [
+        120.13304352415207,
+        120.13304352415207,
+        62.20327550064791
+      ],
+      "sigma3_pair_count": 15,
+      "sigma5_pair_count": 0,
+      "overlap_atoms_removed": 2075,
+      "overlap_cutoff": 1.2763277400417183,
+      "grain_counts": {
+        "1": 2609,
+        "2": 2609,
+        "3": 2522,
+        "4": 2518,
+        "5": 2609,
+        "6": 2508,
+        "7": 2518,
+        "8": 2561,
+        "9": 2564,
+        "10": 2528,
+        "11": 2528,
+        "12": 2522,
+        "13": 2526,
+        "14": 2475,
+        "15": 2539,
+        "16": 2463,
+        "17": 2429,
+        "18": 2429,
+        "19": 2502,
+        "20": 2402,
+        "21": 2514,
+        "22": 2406,
+        "23": 2486,
+        "24": 2459,
+        "25": 2495,
+        "26": 2399,
+        "27": 2517,
+        "28": 2527,
+        "29": 2450,
+        "30": 2442
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.16399999999999998,
+            0.164,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.33599999999999997,
+            0.6639999999999999,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.6639999999999999,
+            0.33599999999999997,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "2b-Z12"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.9638930885009624,
+            0.266289530286258,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.8714999999999999,
+            0.9645,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            8,
+            23
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            -0.865502603314092,
+            -0.216375650828523,
+            -0.4517596942900758
+          ],
+          "anchor_reduced": [
+            0.805,
+            0.712,
+            0.375
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            10,
+            24
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "2b-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.6310090234690356,
+            0.6310090234690356,
+            -0.4512817574435158
+          ],
+          "anchor_reduced": [
+            0.5905,
+            0.5905,
+            -0.125
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            11,
+            18
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            -0.23365801640124598,
+            0.9723188424438945,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            12,
+            17
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            -0.9723188424438945,
+            -0.23365801640124598,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            13,
+            14
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.42,
+            -0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            15,
+            16
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            -0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.5800000000000001,
+            0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            19,
+            20
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.181,
+            0.819,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            21,
+            22
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.319,
+            0.319,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            25,
+            26
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.819,
+            0.181,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            27,
+            30
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            -0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999994
+        },
+        {
+          "pair": [
+            28,
+            29
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        }
+      ],
+      "cna": {
+        "other": 23622,
+        "fcc": 50621,
+        "hcp": 813,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "sigma_s3_z12_only",
+      "sigma3_groups": [
+        "Z12-Z12"
+      ],
+      "role": "class_selective",
+      "hypothesis": "Only Z12-Z12 faces are Sigma3 anchors.",
+      "pair_types": {
+        "Z12-Z12": "sigma3",
+        "Z15-Z15": "sigma5",
+        "Z12-Z14": "sigma5",
+        "Z14-Z14": "sigma5"
+      },
+      "output": "sigma_s3_z12_only.data",
+      "number_of_atoms": 75545,
+      "box_lengths": [
+        120.13304352415207,
+        120.13304352415207,
+        62.20327550064791
+      ],
+      "sigma3_pair_count": 4,
+      "sigma5_pair_count": 11,
+      "overlap_atoms_removed": 2066,
+      "overlap_cutoff": 1.2763277400417183,
+      "grain_counts": {
+        "1": 2609,
+        "2": 2609,
+        "3": 2522,
+        "4": 2518,
+        "5": 2609,
+        "6": 2508,
+        "7": 2518,
+        "8": 2555,
+        "9": 2562,
+        "10": 2547,
+        "11": 2578,
+        "12": 2590,
+        "13": 2530,
+        "14": 2486,
+        "15": 2514,
+        "16": 2476,
+        "17": 2476,
+        "18": 2466,
+        "19": 2551,
+        "20": 2463,
+        "21": 2549,
+        "22": 2456,
+        "23": 2468,
+        "24": 2490,
+        "25": 2556,
+        "26": 2456,
+        "27": 2509,
+        "28": 2511,
+        "29": 2439,
+        "30": 2424
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.16399999999999998,
+            0.164,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.33599999999999997,
+            0.6639999999999999,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.6639999999999999,
+            0.33599999999999997,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "2b-Z12"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.9638930885009624,
+            0.266289530286258,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.8714999999999999,
+            0.9645,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            8,
+            23
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.865502603314092,
+            -0.216375650828523,
+            -0.4517596942900758
+          ],
+          "anchor_reduced": [
+            0.805,
+            0.712,
+            0.375
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584404
+        },
+        {
+          "pair": [
+            10,
+            24
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "2b-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.6310090234690356,
+            0.6310090234690356,
+            -0.4512817574435158
+          ],
+          "anchor_reduced": [
+            0.5905,
+            0.5905,
+            -0.125
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            11,
+            18
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.23365801640124598,
+            0.9723188424438945,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            12,
+            17
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.9723188424438945,
+            -0.23365801640124598,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            13,
+            14
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.42,
+            -0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            15,
+            16
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            -0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.5800000000000001,
+            0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            19,
+            20
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.181,
+            0.819,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            21,
+            22
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.319,
+            0.319,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            25,
+            26
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.819,
+            0.181,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            27,
+            30
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            28,
+            29
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        }
+      ],
+      "cna": {
+        "other": 25158,
+        "fcc": 50125,
+        "hcp": 262,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "sigma_s3_z14_only",
+      "sigma3_groups": [
+        "Z14-Z14"
+      ],
+      "role": "class_selective",
+      "hypothesis": "Only Z14-Z14 faces are Sigma3 anchors.",
+      "pair_types": {
+        "Z12-Z12": "sigma5",
+        "Z15-Z15": "sigma5",
+        "Z12-Z14": "sigma5",
+        "Z14-Z14": "sigma3"
+      },
+      "output": "sigma_s3_z14_only.data",
+      "number_of_atoms": 74926,
+      "box_lengths": [
+        120.13304352415207,
+        120.13304352415207,
+        62.20327550064791
+      ],
+      "sigma3_pair_count": 7,
+      "sigma5_pair_count": 8,
+      "overlap_atoms_removed": 1880,
+      "overlap_cutoff": 1.2763277400417183,
+      "grain_counts": {
+        "1": 2562,
+        "2": 2562,
+        "3": 2490,
+        "4": 2490,
+        "5": 2562,
+        "6": 2528,
+        "7": 2490,
+        "8": 2553,
+        "9": 2517,
+        "10": 2548,
+        "11": 2547,
+        "12": 2531,
+        "13": 2549,
+        "14": 2491,
+        "15": 2524,
+        "16": 2471,
+        "17": 2441,
+        "18": 2442,
+        "19": 2512,
+        "20": 2412,
+        "21": 2508,
+        "22": 2402,
+        "23": 2478,
+        "24": 2487,
+        "25": 2514,
+        "26": 2406,
+        "27": 2510,
+        "28": 2515,
+        "29": 2445,
+        "30": 2439
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.16399999999999998,
+            0.164,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.33599999999999997,
+            0.6639999999999999,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.6639999999999999,
+            0.33599999999999997,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "2b-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.9638930885009624,
+            0.266289530286258,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.8714999999999999,
+            0.9645,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            8,
+            23
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.865502603314092,
+            -0.216375650828523,
+            -0.4517596942900758
+          ],
+          "anchor_reduced": [
+            0.805,
+            0.712,
+            0.375
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584404
+        },
+        {
+          "pair": [
+            10,
+            24
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "2b-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.6310090234690356,
+            0.6310090234690356,
+            -0.4512817574435158
+          ],
+          "anchor_reduced": [
+            0.5905,
+            0.5905,
+            -0.125
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            11,
+            18
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            -0.23365801640124598,
+            0.9723188424438945,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            12,
+            17
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            -0.9723188424438945,
+            -0.23365801640124598,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            13,
+            14
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.42,
+            -0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.999999999999986
+        },
+        {
+          "pair": [
+            15,
+            16
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            -0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.5800000000000001,
+            0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            19,
+            20
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.181,
+            0.819,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            21,
+            22
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.319,
+            0.319,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            25,
+            26
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.819,
+            0.181,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            27,
+            30
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            28,
+            29
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        }
+      ],
+      "cna": {
+        "other": 24597,
+        "fcc": 49922,
+        "hcp": 407,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "sigma_s3_z15_only",
+      "sigma3_groups": [
+        "Z15-Z15"
+      ],
+      "role": "class_selective",
+      "hypothesis": "Only Z15-Z15 faces are Sigma3 anchors.",
+      "pair_types": {
+        "Z12-Z12": "sigma5",
+        "Z15-Z15": "sigma3",
+        "Z12-Z14": "sigma5",
+        "Z14-Z14": "sigma5"
+      },
+      "output": "sigma_s3_z15_only.data",
+      "number_of_atoms": 75421,
+      "box_lengths": [
+        120.13304352415207,
+        120.13304352415207,
+        62.20327550064791
+      ],
+      "sigma3_pair_count": 2,
+      "sigma5_pair_count": 13,
+      "overlap_atoms_removed": 1917,
+      "overlap_cutoff": 1.2763277400417183,
+      "grain_counts": {
+        "1": 2562,
+        "2": 2562,
+        "3": 2490,
+        "4": 2490,
+        "5": 2562,
+        "6": 2528,
+        "7": 2490,
+        "8": 2553,
+        "9": 2517,
+        "10": 2548,
+        "11": 2579,
+        "12": 2587,
+        "13": 2541,
+        "14": 2497,
+        "15": 2524,
+        "16": 2497,
+        "17": 2495,
+        "18": 2485,
+        "19": 2563,
+        "20": 2466,
+        "21": 2546,
+        "22": 2456,
+        "23": 2476,
+        "24": 2493,
+        "25": 2560,
+        "26": 2444,
+        "27": 2519,
+        "28": 2512,
+        "29": 2450,
+        "30": 2429
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.16399999999999998,
+            0.164,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.33599999999999997,
+            0.6639999999999999,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.6639999999999999,
+            0.33599999999999997,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "2b-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.9638930885009624,
+            0.266289530286258,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.8714999999999999,
+            0.9645,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            8,
+            23
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.865502603314092,
+            -0.216375650828523,
+            -0.4517596942900758
+          ],
+          "anchor_reduced": [
+            0.805,
+            0.712,
+            0.375
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584404
+        },
+        {
+          "pair": [
+            10,
+            24
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "2b-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.6310090234690356,
+            0.6310090234690356,
+            -0.4512817574435158
+          ],
+          "anchor_reduced": [
+            0.5905,
+            0.5905,
+            -0.125
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            11,
+            18
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.23365801640124598,
+            0.9723188424438945,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            12,
+            17
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.9723188424438945,
+            -0.23365801640124598,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            13,
+            14
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.42,
+            -0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            15,
+            16
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            -0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.5800000000000001,
+            0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            19,
+            20
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.181,
+            0.819,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            21,
+            22
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.319,
+            0.319,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            25,
+            26
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.819,
+            0.181,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            27,
+            30
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            -0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999994
+        },
+        {
+          "pair": [
+            28,
+            29
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        }
+      ],
+      "cna": {
+        "other": 25396,
+        "fcc": 49884,
+        "hcp": 141,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "sigma_s3_bridge_only",
+      "sigma3_groups": [
+        "Z12-Z14"
+      ],
+      "role": "bridge_selective",
+      "hypothesis": "Only the two cross-class Z12-Z14 bridge faces are Sigma3 anchors.",
+      "pair_types": {
+        "Z12-Z12": "sigma5",
+        "Z15-Z15": "sigma5",
+        "Z12-Z14": "sigma3",
+        "Z14-Z14": "sigma5"
+      },
+      "output": "sigma_s3_bridge_only.data",
+      "number_of_atoms": 75355,
+      "box_lengths": [
+        120.13304352415207,
+        120.13304352415207,
+        62.20327550064791
+      ],
+      "sigma3_pair_count": 2,
+      "sigma5_pair_count": 13,
+      "overlap_atoms_removed": 1951,
+      "overlap_cutoff": 1.2763277400417183,
+      "grain_counts": {
+        "1": 2562,
+        "2": 2562,
+        "3": 2490,
+        "4": 2490,
+        "5": 2562,
+        "6": 2528,
+        "7": 2490,
+        "8": 2565,
+        "9": 2522,
+        "10": 2538,
+        "11": 2579,
+        "12": 2581,
+        "13": 2541,
+        "14": 2497,
+        "15": 2524,
+        "16": 2497,
+        "17": 2498,
+        "18": 2483,
+        "19": 2561,
+        "20": 2470,
+        "21": 2551,
+        "22": 2456,
+        "23": 2490,
+        "24": 2460,
+        "25": 2560,
+        "26": 2444,
+        "27": 2497,
+        "28": 2492,
+        "29": 2443,
+        "30": 2422
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.16399999999999998,
+            0.164,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.33599999999999997,
+            0.6639999999999999,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.6639999999999999,
+            0.33599999999999997,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "2b-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.9638930885009624,
+            0.266289530286258,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.8714999999999999,
+            0.9645,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            8,
+            23
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            -0.865502603314092,
+            -0.216375650828523,
+            -0.4517596942900758
+          ],
+          "anchor_reduced": [
+            0.805,
+            0.712,
+            0.375
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            10,
+            24
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "2b-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma3",
+          "sigma": 3,
+          "angle_degrees": 60.0,
+          "face_normal": [
+            0.6310090234690356,
+            0.6310090234690356,
+            -0.4512817574435158
+          ],
+          "anchor_reduced": [
+            0.5905,
+            0.5905,
+            -0.125
+          ],
+          "swapped": false,
+          "measured_disorientation": 59.99999999999997
+        },
+        {
+          "pair": [
+            11,
+            18
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.23365801640124598,
+            0.9723188424438945,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            12,
+            17
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.9723188424438945,
+            -0.23365801640124598,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            13,
+            14
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.42,
+            -0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            15,
+            16
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            -0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.5800000000000001,
+            0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            19,
+            20
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.181,
+            0.819,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            21,
+            22
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.319,
+            0.319,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            25,
+            26
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.819,
+            0.181,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            27,
+            30
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            28,
+            29
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        }
+      ],
+      "cna": {
+        "other": 25239,
+        "fcc": 49953,
+        "hcp": 163,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "sigma_s5_all_control",
+      "sigma3_groups": [],
+      "role": "negative_control",
+      "hypothesis": "No Sigma3 anchors; tests whether sigma-foam geometry alone drives transformation.",
+      "pair_types": {
+        "Z12-Z12": "sigma5",
+        "Z15-Z15": "sigma5",
+        "Z12-Z14": "sigma5",
+        "Z14-Z14": "sigma5"
+      },
+      "output": "sigma_s5_all_control.data",
+      "number_of_atoms": 75362,
+      "box_lengths": [
+        120.13304352415207,
+        120.13304352415207,
+        62.20327550064791
+      ],
+      "sigma3_pair_count": 0,
+      "sigma5_pair_count": 15,
+      "overlap_atoms_removed": 1948,
+      "overlap_cutoff": 1.2763277400417183,
+      "grain_counts": {
+        "1": 2562,
+        "2": 2562,
+        "3": 2490,
+        "4": 2490,
+        "5": 2562,
+        "6": 2528,
+        "7": 2490,
+        "8": 2553,
+        "9": 2517,
+        "10": 2548,
+        "11": 2579,
+        "12": 2587,
+        "13": 2541,
+        "14": 2497,
+        "15": 2524,
+        "16": 2497,
+        "17": 2495,
+        "18": 2485,
+        "19": 2563,
+        "20": 2466,
+        "21": 2546,
+        "22": 2456,
+        "23": 2476,
+        "24": 2493,
+        "25": 2560,
+        "26": 2444,
+        "27": 2497,
+        "28": 2494,
+        "29": 2437,
+        "30": 2423
+      },
+      "pairs": [
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.16399999999999998,
+            0.164,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            2,
+            4
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.33599999999999997,
+            0.6639999999999999,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            5,
+            7
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8i-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.6639999999999999,
+            0.33599999999999997,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            6,
+            9
+          ],
+          "pair_group": "Z12-Z12",
+          "site_classes": [
+            "Z12",
+            "Z12"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "2b-Z12"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.9638930885009624,
+            0.266289530286258,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.8714999999999999,
+            0.9645,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            8,
+            23
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.865502603314092,
+            -0.216375650828523,
+            -0.4517596942900758
+          ],
+          "anchor_reduced": [
+            0.805,
+            0.712,
+            0.375
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584404
+        },
+        {
+          "pair": [
+            10,
+            24
+          ],
+          "pair_group": "Z12-Z14",
+          "site_classes": [
+            "Z12",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "2b-Z12",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.6310090234690356,
+            0.6310090234690356,
+            -0.4512817574435158
+          ],
+          "anchor_reduced": [
+            0.5905,
+            0.5905,
+            -0.125
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            11,
+            18
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.23365801640124598,
+            0.9723188424438945,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            12,
+            17
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.9723188424438945,
+            -0.23365801640124598,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            13,
+            14
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.42,
+            -0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            15,
+            16
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8i-Z14",
+            "8i-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.3065049320089721,
+            -0.5004162155248525,
+            -0.8097149732430294
+          ],
+          "anchor_reduced": [
+            0.5800000000000001,
+            0.049,
+            0.25
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        },
+        {
+          "pair": [
+            19,
+            20
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.181,
+            0.819,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            21,
+            22
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.319,
+            0.319,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            25,
+            26
+          ],
+          "pair_group": "Z14-Z14",
+          "site_classes": [
+            "Z14",
+            "Z14"
+          ],
+          "wyckoff_labels": [
+            "8j-Z14",
+            "8j-Z14"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.0,
+            0.0,
+            -1.0
+          ],
+          "anchor_reduced": [
+            0.819,
+            0.181,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            27,
+            30
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            -0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.86989764584401
+        },
+        {
+          "pair": [
+            28,
+            29
+          ],
+          "pair_group": "Z15-Z15",
+          "site_classes": [
+            "Z15",
+            "Z15"
+          ],
+          "wyckoff_labels": [
+            "4f-Z15",
+            "4f-Z15"
+          ],
+          "twin_type": "sigma5",
+          "sigma": 5,
+          "angle_degrees": 36.86989764584402,
+          "face_normal": [
+            0.7071067811865476,
+            -0.7071067811865476,
+            0.0
+          ],
+          "anchor_reduced": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "swapped": false,
+          "measured_disorientation": 36.869897645844
+        }
+      ],
+      "cna": {
+        "other": 25548,
+        "fcc": 49762,
+        "hcp": 52,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    }
+  ]
+}

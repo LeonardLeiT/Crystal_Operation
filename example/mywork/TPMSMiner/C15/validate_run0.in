@@ -1,0 +1,8 @@
+units metal
+atom_style atomic
+boundary p p p
+read_data output/01_c15_all.data
+mass 1 63.546
+pair_style zero 6.0
+pair_coeff * *
+run 0

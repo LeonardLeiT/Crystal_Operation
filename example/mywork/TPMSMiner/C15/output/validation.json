@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "configuration": "C15 single-spatial-layer twin design",
+  "number_of_atoms": 75185,
+  "number_of_cells": 24,
+  "topology": "8xZ16 + 16xZ12",
+  "designed_sigma3_pairs": 10,
+  "designed_twin_grains": 20,
+  "ordinary_grain_ids": [11, 12, 15, 16],
+  "ordinary_orientation_mode": "seeded independent random SO(3)",
+  "ordinary_orientation_seed": 20260930,
+  "ordinary_anchors_are_own_cell_centers": true,
+  "same_ordinary_orientations_across_all_combinations": true,
+  "ordinary_sigma3_sigma5_exclusion_degrees": 1.0,
+  "minimum_ordinary_csl_separation_across_combinations_degrees": 1.0550060817405367,
+  "unique_site_class_face_directions": 10,
+  "duplicate_spatial_twin_layers": 0,
+  "retained_directions": {
+    "Z16": [[1,1,1], [1,1,-1], [1,-1,-1], [1,-1,1]],
+    "Z12": [[0,1,1], [0,1,-1], [1,0,1], [1,0,-1], [1,1,0], [1,-1,0]]
+  },
+  "removed_second_layers": [
+    {"pair": [11,12], "direction": [0,1,1]},
+    {"pair": [15,16], "direction": [0,1,-1]}
+  ],
+  "minimum_periodic_atom_distance_A": 1.276689799,
+  "minimum_periodic_atom_distance_across_combinations_A": 1.2764562996015847,
+  "overlap_cutoff_A": 1.2763277400417183,
+  "all_csl_angles_valid": true,
+  "cna_comparison": {
+    "all_sigma3": {"other": 22455, "fcc": 52073, "hcp": 657, "bcc": 0, "icosahedral": 0},
+    "all_sigma5_control": {"other": 23973, "fcc": 50692, "hcp": 53, "bcc": 0, "icosahedral": 0}
+  },
+  "lammps": {
+    "version": "2 Aug 2023 - Update 4",
+    "read_data": "passed",
+    "run_0": "passed"
+  },
+  "project_tests": "13 passed"
+}

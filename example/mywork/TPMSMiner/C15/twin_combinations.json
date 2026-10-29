@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "rules": {
+    "sigma3": "60 degrees about <111>; positive twin-anchor candidate",
+    "sigma5": "36.86989764584402 degrees about <100>; negative control",
+    "shared_phase": "Both grains use the common C15 face center as an FCC lattice-site anchor.",
+    "fixed_geometry": "All candidates use size=9.25, the same equal-volume C15 Laguerre cells, and the same overlap cutoff. Size-series screening is disabled.",
+    "single_layer": "For each site-class face-normal direction, only one spatial CSL layer is retained. Four grains from the duplicate Z12 layers remain ordinary independently oriented grains.",
+    "ordinary_grains": "Grains 11, 12, 15, and 16 use the same seeded random orientations in every candidate, retain their own center anchors, and remain at least 1 degree away from Sigma3/Sigma5 angles relative to every other grain."
+  },
+  "combinations": [
+    {
+      "id": "c15_s3_all_reference",
+      "z16_twin_type": "sigma3",
+      "z12_twin_type": "sigma3",
+      "swap_classes": [],
+      "role": "positive_reference",
+      "hypothesis": "Single-layer Sigma3 coverage across both C15 cell classes."
+    },
+    {
+      "id": "c15_s3_z16_only",
+      "z16_twin_type": "sigma3",
+      "z12_twin_type": "sigma5",
+      "swap_classes": [],
+      "role": "class_selective",
+      "hypothesis": "Only the four tetrahedrally distributed Z16 pairs provide Sigma3 anchors."
+    },
+    {
+      "id": "c15_s3_z12_only",
+      "z16_twin_type": "sigma5",
+      "z12_twin_type": "sigma3",
+      "swap_classes": [],
+      "role": "class_selective",
+      "hypothesis": "Only the six single-layer Z12 pairs provide Sigma3 anchors."
+    },
+    {
+      "id": "c15_s3_all_swap_z16",
+      "z16_twin_type": "sigma3",
+      "z12_twin_type": "sigma3",
+      "swap_classes": ["Z16"],
+      "role": "phase_assignment_variant",
+      "hypothesis": "Retain all Sigma3 faces but exchange parent/twin assignment on every Z16 pair."
+    },
+    {
+      "id": "c15_s3_all_swap_z12",
+      "z16_twin_type": "sigma3",
+      "z12_twin_type": "sigma3",
+      "swap_classes": ["Z12"],
+      "role": "phase_assignment_variant",
+      "hypothesis": "Retain all Sigma3 faces but exchange parent/twin assignment on every Z12 pair."
+    },
+    {
+      "id": "c15_s5_all_control",
+      "z16_twin_type": "sigma5",
+      "z12_twin_type": "sigma5",
+      "swap_classes": [],
+      "role": "negative_control",
+      "hypothesis": "No Sigma3 anchors; tests whether C15 cell geometry alone produces the transformation."
+    }
+  ]
+}

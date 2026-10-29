@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "description": "Experimental A15/W-P candidates assembled only from the paper-validated Sigma3 and Sigma5 Tet pairs.",
+  "candidates": [
+    {
+      "id": "wp_s3_s3_s3_reference",
+      "pair_types": {"x": "sigma3", "y": "sigma3", "z": "sigma3"},
+      "swap_pairs": [],
+      "tier": "reference",
+      "recommended": true,
+      "hypothesis": "Published positive control: a rank-3 CTB anchor network should transform toward the Euler-catenoid network."
+    },
+    {
+      "id": "wp_s5_s3_s3_open_x",
+      "pair_types": {"x": "sigma5", "y": "sigma3", "z": "sigma3"},
+      "swap_pairs": [],
+      "tier": "A",
+      "recommended": true,
+      "hypothesis": "Remove the X-directed CTB anchor while retaining Y/Z locking; test an anisotropic two-catenoid or new open-X topology."
+    },
+    {
+      "id": "wp_s3_s5_s3_open_y",
+      "pair_types": {"x": "sigma3", "y": "sigma5", "z": "sigma3"},
+      "swap_pairs": [],
+      "tier": "A",
+      "recommended": true,
+      "hypothesis": "Remove the Y-directed CTB anchor while retaining X/Z locking; symmetry partner of open-X used to detect numerical bias."
+    },
+    {
+      "id": "wp_s3_s3_s5_open_z",
+      "pair_types": {"x": "sigma3", "y": "sigma3", "z": "sigma5"},
+      "swap_pairs": [],
+      "tier": "A",
+      "recommended": true,
+      "hypothesis": "Remove the Z-directed CTB anchor while retaining X/Y locking; symmetry partner of the other rank-2 candidates."
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_x",
+      "pair_types": {"x": "sigma3", "y": "sigma3", "z": "sigma3"},
+      "swap_pairs": ["x"],
+      "tier": "A",
+      "recommended": true,
+      "hypothesis": "Keep rank-3 CTB locking but exchange which X-Tet orientation faces Dod0/Dod1, changing the asymmetric ordinary-GB distribution."
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_y",
+      "pair_types": {"x": "sigma3", "y": "sigma3", "z": "sigma3"},
+      "swap_pairs": ["y"],
+      "tier": "A",
+      "recommended": true,
+      "hypothesis": "Y-axis counterpart of the single-pair exchange; checks whether the selected evolution is rotationally robust."
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_z",
+      "pair_types": {"x": "sigma3", "y": "sigma3", "z": "sigma3"},
+      "swap_pairs": ["z"],
+      "tier": "A",
+      "recommended": true,
+      "hypothesis": "Z-axis counterpart of the single-pair exchange; preserves all three CTB channels but changes surrounding GB characters."
+    },
+    {
+      "id": "wp_s3_s5_s5_anchor_x",
+      "pair_types": {"x": "sigma3", "y": "sigma5", "z": "sigma5"},
+      "swap_pairs": [],
+      "tier": "B",
+      "recommended": false,
+      "hypothesis": "A single X-directed CTB channel tests whether one-dimensional fencing can seed a cylindrical minimal-surface morphology."
+    },
+    {
+      "id": "wp_s5_s3_s5_anchor_y",
+      "pair_types": {"x": "sigma5", "y": "sigma3", "z": "sigma5"},
+      "swap_pairs": [],
+      "tier": "B",
+      "recommended": false,
+      "hypothesis": "Y-axis counterpart of the rank-1 anchor candidate."
+    },
+    {
+      "id": "wp_s5_s5_s3_anchor_z",
+      "pair_types": {"x": "sigma5", "y": "sigma5", "z": "sigma3"},
+      "swap_pairs": [],
+      "tier": "B",
+      "recommended": false,
+      "hypothesis": "Z-axis counterpart of the rank-1 anchor candidate."
+    },
+    {
+      "id": "wp_s5_s5_s5_negative",
+      "pair_types": {"x": "sigma5", "y": "sigma5", "z": "sigma5"},
+      "swap_pairs": [],
+      "tier": "control",
+      "recommended": true,
+      "hypothesis": "Published negative control: no Sigma3 CTB network and no expected Euler transformation."
+    }
+  ]
+}

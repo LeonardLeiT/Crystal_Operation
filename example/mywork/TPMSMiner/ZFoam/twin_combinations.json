@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "rules": {
+    "fixed_geometry": "hP7 Z phase, P6/mmm, equal-volume Laguerre cells",
+    "positive_boundary": "Sigma3: FCC 60 degrees about <111>",
+    "negative_control": "Sigma5: FCC 36.869897645844 degrees about <100>",
+    "phase_registration": "each selected pair shares its true-face midpoint lattice anchor",
+    "unpaired_cell": "grain 3 (Z12/3f) always has an independent seeded orientation"
+  },
+  "combinations": [
+    {"id": "01_all_sigma3", "sigma3_classes": ["Z12", "Z14", "Z15"]},
+    {"id": "02_z12_only_sigma3", "sigma3_classes": ["Z12"]},
+    {"id": "03_z14_only_sigma3", "sigma3_classes": ["Z14"]},
+    {"id": "04_z15_only_sigma3", "sigma3_classes": ["Z15"]},
+    {"id": "05_z14_z15_sigma3", "sigma3_classes": ["Z14", "Z15"]},
+    {"id": "06_all_sigma5_control", "sigma3_classes": []}
+  ]
+}

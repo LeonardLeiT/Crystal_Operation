@@ -1,0 +1,320 @@
+{
+  "config": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\configs\\wp_twin_candidates.json",
+  "size": 14.0,
+  "lattice_constant": 3.61,
+  "grain_size": 50.54,
+  "box_length": 101.08,
+  "overlap_distance_factor": 0.5,
+  "candidates": [
+    {
+      "id": "wp_s3_s3_s3_reference",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates_size14\\wp_s3_s3_s3_reference.data",
+      "tier": "reference",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 3,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 87161,
+      "grain_counts": {
+        "1": 11189,
+        "2": 11189,
+        "3": 11115,
+        "4": 10563,
+        "5": 11076,
+        "6": 10518,
+        "7": 11033,
+        "8": 10478
+      },
+      "overlap_atoms_removed": 2363,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Published positive control: a rank-3 CTB anchor network should transform toward the Euler-catenoid network.",
+      "cna": {
+        "other": 17700,
+        "fcc": 68784,
+        "hcp": 677,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s5_s3_s3_open_x",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates_size14\\wp_s5_s3_s3_open_x.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma5",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 2,
+      "pair_disorientation_degrees": {
+        "x": 36.86989764584404,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 87207,
+      "grain_counts": {
+        "1": 11189,
+        "2": 11189,
+        "3": 10978,
+        "4": 10771,
+        "5": 11069,
+        "6": 10515,
+        "7": 11022,
+        "8": 10474
+      },
+      "overlap_atoms_removed": 2081,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Remove the X-directed CTB anchor while retaining Y/Z locking; test an anisotropic two-catenoid or new open-X topology.",
+      "cna": {
+        "other": 18391,
+        "fcc": 68372,
+        "hcp": 444,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s5_s3_open_y",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates_size14\\wp_s3_s5_s3_open_y.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma5",
+        "z": "sigma3"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 2,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 36.86989764584404,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 87207,
+      "grain_counts": {
+        "1": 11189,
+        "2": 11189,
+        "3": 11115,
+        "4": 10563,
+        "5": 10927,
+        "6": 10724,
+        "7": 11026,
+        "8": 10474
+      },
+      "overlap_atoms_removed": 2081,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Remove the Y-directed CTB anchor while retaining X/Z locking; symmetry partner of open-X used to detect numerical bias.",
+      "cna": {
+        "other": 18356,
+        "fcc": 68394,
+        "hcp": 457,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s3_s5_open_z",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates_size14\\wp_s3_s3_s5_open_z.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma5"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 2,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 36.86989764584404
+      },
+      "number_of_atoms": 87207,
+      "grain_counts": {
+        "1": 11189,
+        "2": 11189,
+        "3": 11115,
+        "4": 10563,
+        "5": 11076,
+        "6": 10518,
+        "7": 10880,
+        "8": 10677
+      },
+      "overlap_atoms_removed": 2081,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Remove the Z-directed CTB anchor while retaining X/Y locking; symmetry partner of the other rank-2 candidates.",
+      "cna": {
+        "other": 18320,
+        "fcc": 68426,
+        "hcp": 461,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_x",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates_size14\\wp_s3_s3_s3_swap_x.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [
+        "x"
+      ],
+      "anchor_rank": 3,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 87161,
+      "grain_counts": {
+        "1": 11189,
+        "2": 11189,
+        "3": 11115,
+        "4": 10563,
+        "5": 11066,
+        "6": 10528,
+        "7": 11033,
+        "8": 10478
+      },
+      "overlap_atoms_removed": 2363,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Keep rank-3 CTB locking but exchange which X-Tet orientation faces Dod0/Dod1, changing the asymmetric ordinary-GB distribution.",
+      "cna": {
+        "other": 17698,
+        "fcc": 68786,
+        "hcp": 677,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_y",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates_size14\\wp_s3_s3_s3_swap_y.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [
+        "y"
+      ],
+      "anchor_rank": 3,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 87161,
+      "grain_counts": {
+        "1": 11189,
+        "2": 11189,
+        "3": 11115,
+        "4": 10563,
+        "5": 11076,
+        "6": 10518,
+        "7": 11024,
+        "8": 10487
+      },
+      "overlap_atoms_removed": 2363,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Y-axis counterpart of the single-pair exchange; checks whether the selected evolution is rotationally robust.",
+      "cna": {
+        "other": 17698,
+        "fcc": 68786,
+        "hcp": 677,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_z",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates_size14\\wp_s3_s3_s3_swap_z.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [
+        "z"
+      ],
+      "anchor_rank": 3,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 87157,
+      "grain_counts": {
+        "1": 11189,
+        "2": 11189,
+        "3": 11115,
+        "4": 10563,
+        "5": 11076,
+        "6": 10518,
+        "7": 11031,
+        "8": 10476
+      },
+      "overlap_atoms_removed": 2367,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Z-axis counterpart of the single-pair exchange; preserves all three CTB channels but changes surrounding GB characters.",
+      "cna": {
+        "other": 17700,
+        "fcc": 68780,
+        "hcp": 677,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s5_s5_s5_negative",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates_size14\\wp_s5_s5_s5_negative.data",
+      "tier": "control",
+      "pair_types": {
+        "x": "sigma5",
+        "y": "sigma5",
+        "z": "sigma5"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 0,
+      "pair_disorientation_degrees": {
+        "x": 36.86989764584404,
+        "y": 36.86989764584404,
+        "z": 36.86989764584404
+      },
+      "number_of_atoms": 87241,
+      "grain_counts": {
+        "1": 11189,
+        "2": 11189,
+        "3": 10978,
+        "4": 10771,
+        "5": 10906,
+        "6": 10716,
+        "7": 10841,
+        "8": 10651
+      },
+      "overlap_atoms_removed": 1575,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Published negative control: no Sigma3 CTB network and no expected Euler transformation.",
+      "cna": {
+        "other": 19611,
+        "fcc": 67630,
+        "hcp": 0,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "config": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\configs\\wp_twin_candidates.json",
+  "size": 14.0,
+  "lattice_constant": 3.61,
+  "grain_size": 50.54,
+  "box_length": 101.08,
+  "overlap_distance_factor": 0.5,
+  "candidates": [
+    {
+      "id": "wp_s3_s3_s3_reference",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates\\wp_s3_s3_s3_reference.data",
+      "tier": "reference",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 3,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 86773,
+      "grain_counts": {
+        "1": 10977,
+        "2": 10973,
+        "3": 11122,
+        "4": 10563,
+        "5": 11082,
+        "6": 10525,
+        "7": 11046,
+        "8": 10485
+      },
+      "overlap_atoms_removed": 2323,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Published positive control: a rank-3 CTB anchor network should transform toward the Euler-catenoid network.",
+      "dod_orientation_seed": 20260930,
+      "dod_orientation_sources": [
+        "random-Dod0",
+        "random-Dod1"
+      ],
+      "dod_orientations_crystal_to_lab": [
+        [
+          [
+            -0.22327728772989652,
+            -0.9740480171297551,
+            0.037117557968874226
+          ],
+          [
+            0.7459715072867849,
+            -0.19525899696884497,
+            -0.6367106363325512
+          ],
+          [
+            0.6274342699440816,
+            -0.11447438328426301,
+            0.7702089667560518
+          ]
+        ],
+        [
+          [
+            0.20186792573242374,
+            0.8967992391261508,
+            -0.3937009845850601
+          ],
+          [
+            0.42198845428813714,
+            -0.44239153781098284,
+            -0.7913377734701803
+          ],
+          [
+            -0.8838410971481228,
+            -0.00639155505262734,
+            -0.4677435868251021
+          ]
+        ]
+      ],
+      "dod_lattice_origins_reduced": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dod_minimum_csl_separation_degrees": 3.4788175683877185,
+      "cna": {
+        "other": 17571,
+        "fcc": 68522,
+        "hcp": 680,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s5_s3_s3_open_x",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates\\wp_s5_s3_s3_open_x.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma5",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 2,
+      "pair_disorientation_degrees": {
+        "x": 36.86989764584404,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 86842,
+      "grain_counts": {
+        "1": 10977,
+        "2": 10973,
+        "3": 10986,
+        "4": 10792,
+        "5": 11075,
+        "6": 10522,
+        "7": 11035,
+        "8": 10482
+      },
+      "overlap_atoms_removed": 2018,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Remove the X-directed CTB anchor while retaining Y/Z locking; test an anisotropic two-catenoid or new open-X topology.",
+      "dod_orientation_seed": 20260930,
+      "dod_orientation_sources": [
+        "random-Dod0",
+        "random-Dod1"
+      ],
+      "dod_orientations_crystal_to_lab": [
+        [
+          [
+            -0.22327728772989652,
+            -0.9740480171297551,
+            0.037117557968874226
+          ],
+          [
+            0.7459715072867849,
+            -0.19525899696884497,
+            -0.6367106363325512
+          ],
+          [
+            0.6274342699440816,
+            -0.11447438328426301,
+            0.7702089667560518
+          ]
+        ],
+        [
+          [
+            0.20186792573242374,
+            0.8967992391261508,
+            -0.3937009845850601
+          ],
+          [
+            0.42198845428813714,
+            -0.44239153781098284,
+            -0.7913377734701803
+          ],
+          [
+            -0.8838410971481228,
+            -0.00639155505262734,
+            -0.4677435868251021
+          ]
+        ]
+      ],
+      "dod_lattice_origins_reduced": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dod_minimum_csl_separation_degrees": 3.4788175683877185,
+      "cna": {
+        "other": 18316,
+        "fcc": 68079,
+        "hcp": 447,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s5_s3_open_y",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates\\wp_s3_s5_s3_open_y.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma5",
+        "z": "sigma3"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 2,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 36.86989764584404,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 86822,
+      "grain_counts": {
+        "1": 10977,
+        "2": 10973,
+        "3": 11122,
+        "4": 10563,
+        "5": 10937,
+        "6": 10730,
+        "7": 11039,
+        "8": 10481
+      },
+      "overlap_atoms_removed": 2038,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Remove the Y-directed CTB anchor while retaining X/Z locking; symmetry partner of open-X used to detect numerical bias.",
+      "dod_orientation_seed": 20260930,
+      "dod_orientation_sources": [
+        "random-Dod0",
+        "random-Dod1"
+      ],
+      "dod_orientations_crystal_to_lab": [
+        [
+          [
+            -0.22327728772989652,
+            -0.9740480171297551,
+            0.037117557968874226
+          ],
+          [
+            0.7459715072867849,
+            -0.19525899696884497,
+            -0.6367106363325512
+          ],
+          [
+            0.6274342699440816,
+            -0.11447438328426301,
+            0.7702089667560518
+          ]
+        ],
+        [
+          [
+            0.20186792573242374,
+            0.8967992391261508,
+            -0.3937009845850601
+          ],
+          [
+            0.42198845428813714,
+            -0.44239153781098284,
+            -0.7913377734701803
+          ],
+          [
+            -0.8838410971481228,
+            -0.00639155505262734,
+            -0.4677435868251021
+          ]
+        ]
+      ],
+      "dod_lattice_origins_reduced": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dod_minimum_csl_separation_degrees": 3.4788175683877185,
+      "cna": {
+        "other": 18285,
+        "fcc": 68080,
+        "hcp": 457,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s3_s5_open_z",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates\\wp_s3_s3_s5_open_z.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma5"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 2,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 36.86989764584404
+      },
+      "number_of_atoms": 86846,
+      "grain_counts": {
+        "1": 10977,
+        "2": 10973,
+        "3": 11122,
+        "4": 10563,
+        "5": 11082,
+        "6": 10525,
+        "7": 10902,
+        "8": 10702
+      },
+      "overlap_atoms_removed": 2014,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Remove the Z-directed CTB anchor while retaining X/Y locking; symmetry partner of the other rank-2 candidates.",
+      "dod_orientation_seed": 20260930,
+      "dod_orientation_sources": [
+        "random-Dod0",
+        "random-Dod1"
+      ],
+      "dod_orientations_crystal_to_lab": [
+        [
+          [
+            -0.22327728772989652,
+            -0.9740480171297551,
+            0.037117557968874226
+          ],
+          [
+            0.7459715072867849,
+            -0.19525899696884497,
+            -0.6367106363325512
+          ],
+          [
+            0.6274342699440816,
+            -0.11447438328426301,
+            0.7702089667560518
+          ]
+        ],
+        [
+          [
+            0.20186792573242374,
+            0.8967992391261508,
+            -0.3937009845850601
+          ],
+          [
+            0.42198845428813714,
+            -0.44239153781098284,
+            -0.7913377734701803
+          ],
+          [
+            -0.8838410971481228,
+            -0.00639155505262734,
+            -0.4677435868251021
+          ]
+        ]
+      ],
+      "dod_lattice_origins_reduced": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dod_minimum_csl_separation_degrees": 3.4788175683877185,
+      "cna": {
+        "other": 18233,
+        "fcc": 68147,
+        "hcp": 466,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_x",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates\\wp_s3_s3_s3_swap_x.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [
+        "x"
+      ],
+      "anchor_rank": 3,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 86773,
+      "grain_counts": {
+        "1": 10977,
+        "2": 10973,
+        "3": 11115,
+        "4": 10570,
+        "5": 11072,
+        "6": 10535,
+        "7": 11046,
+        "8": 10485
+      },
+      "overlap_atoms_removed": 2323,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Keep rank-3 CTB locking but exchange which X-Tet orientation faces Dod0/Dod1, changing the asymmetric ordinary-GB distribution.",
+      "dod_orientation_seed": 20260930,
+      "dod_orientation_sources": [
+        "random-Dod0",
+        "random-Dod1"
+      ],
+      "dod_orientations_crystal_to_lab": [
+        [
+          [
+            -0.22327728772989652,
+            -0.9740480171297551,
+            0.037117557968874226
+          ],
+          [
+            0.7459715072867849,
+            -0.19525899696884497,
+            -0.6367106363325512
+          ],
+          [
+            0.6274342699440816,
+            -0.11447438328426301,
+            0.7702089667560518
+          ]
+        ],
+        [
+          [
+            0.20186792573242374,
+            0.8967992391261508,
+            -0.3937009845850601
+          ],
+          [
+            0.42198845428813714,
+            -0.44239153781098284,
+            -0.7913377734701803
+          ],
+          [
+            -0.8838410971481228,
+            -0.00639155505262734,
+            -0.4677435868251021
+          ]
+        ]
+      ],
+      "dod_lattice_origins_reduced": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dod_minimum_csl_separation_degrees": 3.4788175683877185,
+      "cna": {
+        "other": 17567,
+        "fcc": 68526,
+        "hcp": 680,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_y",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates\\wp_s3_s3_s3_swap_y.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [
+        "y"
+      ],
+      "anchor_rank": 3,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 86773,
+      "grain_counts": {
+        "1": 10977,
+        "2": 10973,
+        "3": 11122,
+        "4": 10563,
+        "5": 11083,
+        "6": 10524,
+        "7": 11037,
+        "8": 10494
+      },
+      "overlap_atoms_removed": 2323,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Y-axis counterpart of the single-pair exchange; checks whether the selected evolution is rotationally robust.",
+      "dod_orientation_seed": 20260930,
+      "dod_orientation_sources": [
+        "random-Dod0",
+        "random-Dod1"
+      ],
+      "dod_orientations_crystal_to_lab": [
+        [
+          [
+            -0.22327728772989652,
+            -0.9740480171297551,
+            0.037117557968874226
+          ],
+          [
+            0.7459715072867849,
+            -0.19525899696884497,
+            -0.6367106363325512
+          ],
+          [
+            0.6274342699440816,
+            -0.11447438328426301,
+            0.7702089667560518
+          ]
+        ],
+        [
+          [
+            0.20186792573242374,
+            0.8967992391261508,
+            -0.3937009845850601
+          ],
+          [
+            0.42198845428813714,
+            -0.44239153781098284,
+            -0.7913377734701803
+          ],
+          [
+            -0.8838410971481228,
+            -0.00639155505262734,
+            -0.4677435868251021
+          ]
+        ]
+      ],
+      "dod_lattice_origins_reduced": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dod_minimum_csl_separation_degrees": 3.4788175683877185,
+      "cna": {
+        "other": 17569,
+        "fcc": 68525,
+        "hcp": 679,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s3_s3_s3_swap_z",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates\\wp_s3_s3_s3_swap_z.data",
+      "tier": "A",
+      "pair_types": {
+        "x": "sigma3",
+        "y": "sigma3",
+        "z": "sigma3"
+      },
+      "swap_pairs": [
+        "z"
+      ],
+      "anchor_rank": 3,
+      "pair_disorientation_degrees": {
+        "x": 59.999999999999986,
+        "y": 60.00000000000001,
+        "z": 60.00000000000001
+      },
+      "number_of_atoms": 86769,
+      "grain_counts": {
+        "1": 10977,
+        "2": 10973,
+        "3": 11122,
+        "4": 10563,
+        "5": 11082,
+        "6": 10525,
+        "7": 11038,
+        "8": 10489
+      },
+      "overlap_atoms_removed": 2327,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Z-axis counterpart of the single-pair exchange; preserves all three CTB channels but changes surrounding GB characters.",
+      "dod_orientation_seed": 20260930,
+      "dod_orientation_sources": [
+        "random-Dod0",
+        "random-Dod1"
+      ],
+      "dod_orientations_crystal_to_lab": [
+        [
+          [
+            -0.22327728772989652,
+            -0.9740480171297551,
+            0.037117557968874226
+          ],
+          [
+            0.7459715072867849,
+            -0.19525899696884497,
+            -0.6367106363325512
+          ],
+          [
+            0.6274342699440816,
+            -0.11447438328426301,
+            0.7702089667560518
+          ]
+        ],
+        [
+          [
+            0.20186792573242374,
+            0.8967992391261508,
+            -0.3937009845850601
+          ],
+          [
+            0.42198845428813714,
+            -0.44239153781098284,
+            -0.7913377734701803
+          ],
+          [
+            -0.8838410971481228,
+            -0.00639155505262734,
+            -0.4677435868251021
+          ]
+        ]
+      ],
+      "dod_lattice_origins_reduced": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dod_minimum_csl_separation_degrees": 3.4788175683877185,
+      "cna": {
+        "other": 17572,
+        "fcc": 68518,
+        "hcp": 679,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    },
+    {
+      "id": "wp_s5_s5_s5_negative",
+      "output": "D:\\Mywork\\crystalops\\example\\mywork\\TPMSMiner\\results\\wp_twin_candidates\\wp_s5_s5_s5_negative.data",
+      "tier": "control",
+      "pair_types": {
+        "x": "sigma5",
+        "y": "sigma5",
+        "z": "sigma5"
+      },
+      "swap_pairs": [],
+      "anchor_rank": 0,
+      "pair_disorientation_degrees": {
+        "x": 36.86989764584404,
+        "y": 36.86989764584404,
+        "z": 36.86989764584404
+      },
+      "number_of_atoms": 86904,
+      "grain_counts": {
+        "1": 10977,
+        "2": 10973,
+        "3": 10986,
+        "4": 10792,
+        "5": 10916,
+        "6": 10721,
+        "7": 10864,
+        "8": 10675
+      },
+      "overlap_atoms_removed": 1484,
+      "overlap_cutoff": 1.2763277400417183,
+      "hypothesis": "Published negative control: no Sigma3 CTB network and no expected Euler transformation.",
+      "dod_orientation_seed": 20260930,
+      "dod_orientation_sources": [
+        "random-Dod0",
+        "random-Dod1"
+      ],
+      "dod_orientations_crystal_to_lab": [
+        [
+          [
+            -0.22327728772989652,
+            -0.9740480171297551,
+            0.037117557968874226
+          ],
+          [
+            0.7459715072867849,
+            -0.19525899696884497,
+            -0.6367106363325512
+          ],
+          [
+            0.6274342699440816,
+            -0.11447438328426301,
+            0.7702089667560518
+          ]
+        ],
+        [
+          [
+            0.20186792573242374,
+            0.8967992391261508,
+            -0.3937009845850601
+          ],
+          [
+            0.42198845428813714,
+            -0.44239153781098284,
+            -0.7913377734701803
+          ],
+          [
+            -0.8838410971481228,
+            -0.00639155505262734,
+            -0.4677435868251021
+          ]
+        ]
+      ],
+      "dod_lattice_origins_reduced": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.5,
+          0.5
+        ]
+      ],
+      "dod_minimum_csl_separation_degrees": 3.4788175683877185,
+      "cna": {
+        "other": 19639,
+        "fcc": 67262,
+        "hcp": 3,
+        "bcc": 0,
+        "icosahedral": 0
+      }
+    }
+  ]
+}

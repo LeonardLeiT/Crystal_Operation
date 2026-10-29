@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "topology": "3xZ12 + 2xZ14 + 2xZ15",
+  "periodic_coordination_numbers": [12, 12, 12, 15, 15, 14, 14],
+  "number_of_atoms": 74509,
+  "number_of_cells": 7,
+  "atoms_per_cell": [10919, 10418, 10733, 10750, 10551, 10855, 10283],
+  "box_vectors_A": [
+    [100.97056463676734, 0.0, 0.0],
+    [-50.48528231838367, 87.44307400989919, 0.0],
+    [0.0, 0.0, 100.1714234110392]
+  ],
+  "equal_cell_volumes_reduced": [
+    0.12273873751408391,
+    0.12273873751408394,
+    0.12273873751408389,
+    0.12273873751408382,
+    0.12273873751408383,
+    0.12273873751408389,
+    0.12273873751408389
+  ],
+  "maximum_reduced_volume_error": 6.938893903907228e-17,
+  "minimum_periodic_atom_distance_A": 1.2764871668999958,
+  "overlap_cutoff_A": 1.2763277400417183,
+  "number_of_lammps_data_files": 13,
+  "all_data_files_read_back": true,
+  "twin_combinations": 6,
+  "all_csl_angles_valid": true,
+  "cna_comparison": {
+    "all_sigma3": {"other": 14709, "fcc": 59016, "hcp": 784, "bcc": 0, "icosahedral": 0},
+    "all_sigma5_control": {"other": 16185, "fcc": 58160, "hcp": 6, "bcc": 1, "icosahedral": 0}
+  },
+  "lammps": {
+    "version": "2 Aug 2023 - Update 4",
+    "read_data": "passed",
+    "run_0": "passed",
+    "note": "The exact 120-degree hexagonal cell produces LAMMPS's expected large-skew performance warning at |xy|=lx/2; geometry and reading are valid."
+  },
+  "project_tests": "13 passed"
+}

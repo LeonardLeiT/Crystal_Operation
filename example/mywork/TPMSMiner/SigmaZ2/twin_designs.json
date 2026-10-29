@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "selection_trials": 20000,
+  "rules": {
+    "true_faces_only": "Every pair must share a finite face in the periodic 60-cell Voronoi graph.",
+    "exclude_sigma": "Any pair whose modulo-30 source pair occurs in Sigma/TWIN_FACE_PAIRS is forbidden, including cross-layer images.",
+    "disjoint_pairs": "Within one design each grain occurs in at most one controlled CSL pair.",
+    "background": "All unpaired grains use reproducible independent orientations and their own phase anchors."
+  },
+  "designs": [
+    {
+      "id": "01_cross_layer_10",
+      "target_pairs": 10,
+      "placements": {"cross-layer": 10},
+      "class_filter": "any",
+      "selection_seed": 1,
+      "hypothesis": "Tests whether interfaces coupling the two Z copies dominate the transformation."
+    },
+    {
+      "id": "02_intralayer_balanced_12",
+      "target_pairs": 12,
+      "placements": {"lower": 6, "upper": 6},
+      "class_filter": "any",
+      "selection_seed": 2,
+      "hypothesis": "Two independent new in-layer twin populations without cross-layer anchors."
+    },
+    {
+      "id": "03_three_zone_balanced_15",
+      "target_pairs": 15,
+      "placements": {"lower": 5, "upper": 5, "cross-layer": 5},
+      "class_filter": "any",
+      "selection_seed": 3,
+      "hypothesis": "Balanced three-zone reference with half of the grains in controlled twins."
+    },
+    {
+      "id": "04_cross_dominant_18",
+      "target_pairs": 18,
+      "placements": {"lower": 4, "upper": 4, "cross-layer": 10},
+      "class_filter": "any",
+      "selection_seed": 4,
+      "hypothesis": "Dense but non-saturating network biased toward inter-copy coupling."
+    },
+    {
+      "id": "05_z12_involved_10",
+      "target_pairs": 10,
+      "class_filter": "contains-Z12",
+      "selection_seed": 5,
+      "hypothesis": "Selectively tests interfaces incident to the dodecahedral Z12 cells."
+    },
+    {
+      "id": "06_z14_network_12",
+      "target_pairs": 12,
+      "placements": {"lower": 4, "upper": 4, "cross-layer": 4},
+      "class_filter": "Z14-Z14",
+      "selection_seed": 6,
+      "hypothesis": "A class-pure Z14 network distributed equally over all three zones."
+    },
+    {
+      "id": "07_z15_bridges_8",
+      "target_pairs": 8,
+      "class_filter": "contains-Z15",
+      "selection_seed": 7,
+      "hypothesis": "Uses every rare Z15 cell once as a sparse high-coordination bridge."
+    },
+    {
+      "id": "08_high_coverage_24",
+      "target_pairs": 24,
+      "placements": {"lower": 8, "upper": 8, "cross-layer": 8},
+      "class_filter": "any",
+      "selection_seed": 8,
+      "hypothesis": "High-coverage limit with 48 controlled and 12 ordinary grains."
+    }
+  ],
+  "control": {
+    "id": "09_high_coverage_sigma5_control",
+    "source_design": "08_high_coverage_24",
+    "twin_type": "sigma5",
+    "hypothesis": "Same faces and coverage as design 08, but no Sigma3 twins."
+  }
+}

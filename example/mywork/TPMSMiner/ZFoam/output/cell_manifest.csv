@@ -1,0 +1,8 @@
+﻿grain_id,site_class,wyckoff_label,coordination_number,atom_count,center_fx,center_fy,center_fz,boundary_role,twin_partner_grain_id,sigma,misorientation_degrees
+1,Z12,3f-Z12,12,10919,0.5,0.0,0.0,designed_csl_pair,2,3,60.0
+2,Z12,3f-Z12,12,10418,0.0,0.5,0.0,designed_csl_pair,1,3,60.0
+3,Z12,3f-Z12,12,10733,0.5,0.5,0.0,ordinary_grain,,,
+4,Z15,2d-Z15,15,10750,0.3333333333333333,0.6666666666666666,0.5,designed_csl_pair,5,3,60.0
+5,Z15,2d-Z15,15,10551,0.6666666666666666,0.3333333333333333,0.5,designed_csl_pair,4,3,60.0
+6,Z14,2e-Z14,14,10855,0.0,0.0,0.25,designed_csl_pair,7,3,60.0
+7,Z14,2e-Z14,14,10283,0.0,0.0,0.75,designed_csl_pair,6,3,60.0

@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "configuration": "SigmaZ2 independent twin library",
+  "number_of_designs": 9,
+  "sigma3_designs": 8,
+  "sigma5_controls": 1,
+  "available_non_sigma_true_faces": 364,
+  "inherited_sigma_pairs_in_all_designs": 0,
+  "pair_counts": [10, 12, 15, 18, 10, 12, 8, 24, 24],
+  "atom_count_range": [150310, 150610],
+  "box_lengths_A": [120.1330435241521, 120.1330435241521, 124.4065510012958],
+  "number_of_cells": 60,
+  "default_design": "03_three_zone_balanced_15",
+  "default_number_of_atoms": 150402,
+  "minimum_atoms_per_cell": 2459,
+  "maximum_atoms_per_cell": 2566,
+  "minimum_periodic_atom_distance_across_library_A": 1.276352185,
+  "overlap_cutoff_A": 1.2763277400417183,
+  "all_csl_angles_valid": true,
+  "all_pairs_disjoint_within_design": true,
+  "all_pairs_are_non_sigma_true_faces": true,
+  "minimum_weighted_laguerre_face_margin": 0.049737430574451125,
+  "all_nine_lammps_files_read_back": true,
+  "all_cna_counts_match_atom_counts": true,
+  "default_cna": {
+    "other": 51038,
+    "fcc": 98790,
+    "hcp": 574,
+    "bcc": 0,
+    "icosahedral": 0
+  },
+  "lammps": {
+    "version": "2 Aug 2023 - Update 4",
+    "read_data": "passed",
+    "run_0": "passed",
+    "atoms_read": 150402
+  },
+  "project_tests": "13 passed"
+}

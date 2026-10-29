@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crystalops"
+version = "0.1.0"
+description = "Build, transform, read, and write atomistic crystal structures."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.7", "scikit-image>=0.21"]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["crystalops*", "crysplot*"]
+
+[tool.pytest.ini_options]
+testpaths = ["example/crystalops"]
+addopts = "-q"

@@ -1,0 +1,8 @@
+units metal
+atom_style atomic
+boundary p p p
+read_data ../results/lammps/wp_s5_s3_s3_open_x.data
+mass 1 63.546
+pair_style zero 6.0
+pair_coeff * *
+run 0
