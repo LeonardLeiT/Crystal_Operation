@@ -5,13 +5,18 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "crystalops"
 version = "0.1.0"
-description = "Build, transform, read, and write atomistic crystal structures."
+description = "Model, analyze, visualize, and exchange atomistic structures."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = ["numpy>=1.24"]
 
 [project.optional-dependencies]
 plot = ["matplotlib>=3.7", "scikit-image>=0.21"]
+visualization = ["matplotlib>=3.7", "scikit-image>=0.21"]
+analysis = ["scipy>=1.10", "scikit-image>=0.21"]
+grain-segmentation = ["ovito>=3.13"]
+defect-mesh = ["ovito>=3.13"]
+mesh-viewer = ["matplotlib>=3.7", "plotly>=5.18"]
 test = ["pytest>=8.0"]
 
 [tool.setuptools.packages.find]

@@ -1,1 +1,1 @@
-"""Plot-oriented post-processing recipes from the original project."""
+"""Compatibility paths for legacy plotting and post-processing recipes."""

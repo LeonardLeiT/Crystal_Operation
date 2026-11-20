@@ -2,8 +2,9 @@
 
 import numpy as np
 
-from crystalops import CrystalBuilder, CrystalStructure, FCC
-from crystalops.operations import assign_atom_type
+from crystalops.core import CrystalStructure
+from crystalops.modeling import CrystalBuilder, FCC
+from crystalops.modeling.operations import assign_atom_type
 
 
 def test_lammps_data_round_trip(tmp_path) -> None:

@@ -1,1 +1,1 @@
-"""Figure recipes migrated from the original project scripts."""
+"""Compatibility paths for :mod:`crystalops.visualization.recipes.figures`."""

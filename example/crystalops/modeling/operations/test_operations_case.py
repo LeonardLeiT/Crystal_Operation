@@ -2,8 +2,8 @@
 
 import numpy as np
 
-from crystalops import CrystalBuilder, FCC
-from crystalops.operations import (
+from crystalops.modeling import CrystalBuilder, FCC
+from crystalops.modeling.operations import (
     remove_duplicates,
     rotation_matrix,
     select_sphere,

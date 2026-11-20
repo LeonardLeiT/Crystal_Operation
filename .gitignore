@@ -10,3 +10,4 @@ dist/
 *.data
 *.cfg
 *.svg
+analysis_results/

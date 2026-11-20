@@ -9,8 +9,8 @@ import sys
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
-from crystalops import CrystalStructure
-from crystalops.operations import rotation_matrix
+from crystalops.core import CrystalStructure
+from crystalops.modeling.operations import rotation_matrix
 
 
 def modify_structure(

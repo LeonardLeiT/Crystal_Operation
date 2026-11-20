@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from crystalops import (
+from crystalops.modeling import (
     FCC,
     KelvinCrystal,
     SchwarzCrystal,
@@ -180,6 +180,36 @@ def test_build_schwarz_crystal() -> None:
     assert structure.metadata["type_masses"] == {1: 63.546}
     assert isinstance(structure.metadata["builder"], str)
     assert structure.metadata["builder"] == "SchwarzCrystal"
+
+
+def test_build_periodic_dsc_series_member() -> None:
+    """Retain the two central domains and all four FCC twin variants."""
+    a0 = 3.61
+    structure = SchwarzCrystal(
+        size=12, z_ratio=0.75, lattice_constant=a0, schwarz_type="DSC"
+    ).build()
+    lengths = np.diag(structure.cell)
+    assert np.allclose(lengths, np.array([12, 12, 9]) * a0)
+    assert all(structure.pbc)
+    points = structure.positions
+    assert np.all((points >= 0.0) & (points < lengths))
+
+    domains = structure.properties["domain_ids"]
+    grains = structure.properties["grain_ids"]
+    assert set(domains) == {1, 2, 3, 4, 5, 6}
+    assert np.array_equal(grains, np.array([1, 1, 2, 3, 4, 5])[domains - 1])
+    layers = structure.metadata["twin_plane_layers"]
+    assert np.all(layers[:, 1] > layers[:, 0])
+    assert np.all((layers[:, 1] - layers[:, 0]) % 3 == 0)
+    # Domain 3 shares both physical (111) facet registries with the parent.
+    # This aspect ratio requires an actual lattice shift from the center.
+    twin_orientation = np.array([[-1, 2, 2], [2, -1, 2], [2, 2, -1]]) / 3.0
+    assert layers[0, 0] % 3 != 0
+    twin_origin = lengths / 2 + a0 * (2.0 / 3.0) * layers[0, 0] * np.ones(3)
+    crystal = 2 * ((points[domains == 3] - twin_origin) / a0) @ twin_orientation
+    sites = np.rint(crystal).astype(int)
+    assert np.allclose(crystal, sites, rtol=0.0, atol=1e-10)
+    assert np.all(sites.sum(axis=1) % 2 == 0)
 
 
 def test_build_p_schwarz_crystal() -> None:

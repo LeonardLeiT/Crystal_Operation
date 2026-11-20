@@ -1,31 +1,14 @@
-"""Render a generated crystal with the separate crysplot package."""
+"""Compatibility entry point for :mod:`example.crystalops.visualization.plot_structure`."""
 
-from __future__ import annotations
-
-import argparse
 from pathlib import Path
 import sys
 
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from crysplot import StructurePlotter
-from crystalops import CrystalBuilder, FCC
+from example.crystalops.visualization.plot_structure import main
 
-
-def main() -> None:
-    """Build an FCC crystal and render it as an image."""
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=Path("fcc.svg"))
-    parser.add_argument("--show", action="store_true")
-    options = parser.parse_args()
-
-    structure = CrystalBuilder(FCC("Cu"), (3, 3, 3), 3.61).build()
-    StructurePlotter(structure).plot(
-        output=options.output,
-        show=options.show,
-    )
-    print(f"Wrote {options.output}")
+__all__ = ["main"]
 
 
 if __name__ == "__main__":

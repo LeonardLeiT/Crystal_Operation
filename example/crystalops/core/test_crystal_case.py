@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from crystalops import BCC, CrystalBuilder, FCC
+from crystalops.modeling import BCC, CrystalBuilder, FCC
 
 
 def test_build_fcc_supercell() -> None:

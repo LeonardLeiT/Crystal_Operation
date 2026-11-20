@@ -1,15 +1,6 @@
-"""Abstract interfaces for structure construction."""
+"""Compatibility alias for :mod:`crystalops.modeling.builders.base`."""
 
-from __future__ import annotations
+from importlib import import_module as _import_module
+import sys as _sys
 
-from abc import ABC, abstractmethod
-
-from crystalops.core import CrystalStructure
-
-
-class StructureBuilder(ABC):
-    """Build a complete :class:`CrystalStructure` without writing files."""
-
-    @abstractmethod
-    def build(self) -> CrystalStructure:
-        """Construct and return a new crystal structure."""
+_sys.modules[__name__] = _import_module("crystalops.modeling.builders.base")

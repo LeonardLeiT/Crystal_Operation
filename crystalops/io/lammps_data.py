@@ -41,8 +41,8 @@ class LammpsDataIO(StructureIO):
     preserving all fractional coordinates.
 
     Examples:
-        >>> from crystalops.builders import CrystalBuilder
-        >>> from crystalops.lattices import face_centered_cubic
+        >>> from crystalops.modeling.builders import CrystalBuilder
+        >>> from crystalops.modeling.lattices import face_centered_cubic
         >>> structure = CrystalBuilder(face_centered_cubic(), (2, 2, 2), 3.61).build()
         >>> LammpsDataIO.write(structure, Path("copper.data"))
         >>> loaded = LammpsDataIO.read(Path("copper.data"))

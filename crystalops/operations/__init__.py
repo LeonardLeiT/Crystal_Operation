@@ -1,29 +1,4 @@
-"""Pure operations that transform :class:`CrystalStructure` objects."""
+"""Compatibility exports from :mod:`crystalops.modeling.operations`."""
 
-from .geometry import (
-    assign_atom_type,
-    merge,
-    remove_duplicates,
-    repeat,
-    rotate,
-    rotation_matrix,
-    select,
-    select_sphere,
-    slice_by_planes,
-    translate,
-    wrap,
-)
-
-__all__ = [
-    "assign_atom_type",
-    "merge",
-    "remove_duplicates",
-    "repeat",
-    "rotate",
-    "rotation_matrix",
-    "select",
-    "select_sphere",
-    "slice_by_planes",
-    "translate",
-    "wrap",
-]
+from crystalops.modeling.operations import *  # noqa: F401,F403
+from crystalops.modeling.operations import __all__
